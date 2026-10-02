@@ -38,6 +38,8 @@
     font-size: 1rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    /* Sicherheitsnetz: nichts darf die Seite auf dem Handy seitlich verbreitern */
+    overflow-x: clip;
   }
   a,
   button {

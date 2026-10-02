@@ -11,7 +11,7 @@ export function MobileActionBar() {
     "btn flex flex-1 flex-col items-center justify-center gap-1 rounded-xl py-2 text-[13px] font-medium"
   return (
     <>
-      <div aria-hidden="true" className="h-[calc(4.75rem+env(safe-area-inset-bottom,0px))] md:hidden" />
+      <div aria-hidden="true" className="h-[calc(4.75rem+env(safe-area-inset-bottom,0px))] bg-black md:hidden" />
       <nav
         aria-label="Schnellkontakt"
         className="action-bar fixed inset-x-0 bottom-0 z-[var(--z-nav)] px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:hidden"
