@@ -1,3 +1,4 @@
+export const dynamic = "force-static"
 import { ImageResponse } from "next/og"
 
 export const alt = "R.O.M Cartech – Felgenlackierung, Pulverbeschichtung und PKW-Lackierung in Essen"

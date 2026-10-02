@@ -21,8 +21,8 @@ export function Photo({
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`/images/${name}-900.webp`}
-      srcSet={`/images/${name}-900.webp 900w, /images/${name}-1600.webp ${Math.min(w, 1600)}w`}
+      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${name}-900.webp`}
+      srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${name}-900.webp 900w, ${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${name}-1600.webp ${Math.min(w, 1600)}w`}
       sizes={sizes}
       alt={alt}
       width={w}
