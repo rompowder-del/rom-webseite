@@ -1,0 +1,729 @@
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/standard.css";
+
+:root {
+  --black: #0b0b0c; /* Off-Black statt reinem Schwarz */
+  --white: #ffffff;
+  --graphite: #5c5f66; /* Sekundärtext */
+  --silver: #d6d8dc; /* Linien */
+  --mist: #f2f3f5; /* ruhige Flächen */
+  --paint: #7d0c12; /* aktuell gewählter Lack – wird live umgeschaltet */
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@theme inline {
+  --font-sans: "Archivo Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-graphite: var(--graphite);
+  --color-silver: var(--silver);
+  --color-mist: var(--mist);
+  --color-paint: var(--paint);
+  --color-black: #0b0b0c;
+  --z-nav: 40;
+  --z-menu: 35;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font-sans);
+    font-variation-settings: "wdth" 100;
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a,
+  button {
+    touch-action: manipulation;
+  }
+  button {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--paint);
+    color: var(--white);
+  }
+  html {
+    accent-color: var(--black);
+    caret-color: var(--black);
+    scrollbar-color: rgb(11 11 12 / 0.35) transparent;
+  }
+  a {
+    text-underline-offset: 0.2em;
+  }
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+  @media (pointer: coarse) {
+    input,
+    textarea,
+    select {
+      font-size: 16px;
+    }
+  }
+}
+
+@property --sweep {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 46%;
+}
+@keyframes sweep {
+  from {
+    --sweep: 14%;
+  }
+  to {
+    --sweep: 58%;
+  }
+}
+@keyframes status-ping {
+  from {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  to {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+@keyframes spray-wipe {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+}
+@keyframes mist-travel {
+  from {
+    translate: -60% 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    translate: 160% 0;
+    opacity: 0;
+  }
+}
+@keyframes sheen {
+  from {
+    translate: -120% 0;
+  }
+  to {
+    translate: 220% 0;
+  }
+}
+@keyframes paint-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes marquee-ltr {
+  from {
+    translate: -50% 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+@keyframes strip-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fender-in {
+  from {
+    transform: translateY(14%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* Eigene Bausteine in einer Ebene unter den Tailwind-Utilities, damit z. B. "absolute" greift */
+@layer components {
+/* Breite Schrift für Überschriften – das ist die "Stimme" der Seite */
+.display {
+  font-variation-settings: "wdth" 118;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+.display-sm {
+  font-variation-settings: "wdth" 112;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+.wordmark {
+  font-variation-settings: "wdth" 125;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+}
+
+/* ---------- Lackfläche: Grundfarbe + Spiegelungen + Metallic-Flakes ---------- */
+.paint-surface {
+  background-color: var(--paint);
+  background-image:
+    /* Lichtpunkt, folgt der Maus */
+    radial-gradient(
+      ellipse 38% 26% at var(--lx, 62%) var(--ly, 32%),
+      rgb(255 255 255 / 0.55),
+      rgb(255 255 255 / 0.12) 45%,
+      transparent 70%
+    ),
+    /* langer Glanzstreifen wie eine Lichtleiste in der Lackierkabine */
+    linear-gradient(
+      100deg,
+      transparent calc(var(--sweep) - 9%),
+      rgb(255 255 255 / 0.32) var(--sweep),
+      transparent calc(var(--sweep) + 7%)
+    ),
+    /* oben spiegelt sich der helle Himmel, unten der dunkle Boden */
+    linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0.22) 0%,
+      rgb(255 255 255 / 0.04) 26%,
+      rgb(0 0 0 / 0.08) 52%,
+      rgb(0 0 0 / 0.62) 100%
+    );
+  transition: background-color 900ms var(--ease-in-out);
+}
+.paint-flake {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -0.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 900ms var(--ease-in-out);
+  pointer-events: none;
+}
+[data-metallic] > .paint-flake {
+  opacity: 0.55;
+}
+
+/* Kotflügel-Silhouette als Maske */
+.fender-mask {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 600' preserveAspectRatio='none'%3E%3Cpath d='M0 600V352C170 300 330 236 560 214C760 195 930 196 1100 222C1240 243 1350 280 1440 318V600Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 600' preserveAspectRatio='none'%3E%3Cpath d='M0 600V352C170 300 330 236 560 214C760 195 930 196 1100 222C1240 243 1350 280 1440 318V600Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+/* Beim Laden wandert der Glanzstreifen einmal langsam über die Fläche */
+.paint-sweep {
+  animation: sweep 2800ms var(--ease-out) 250ms both;
+}
+
+/* Musterblech (Kachel) */
+.panel-chip {
+  position: relative;
+  overflow: hidden;
+  --lx: 72%;
+  --ly: 16%;
+  --sweep: 38%;
+}
+
+/* ---------- Seiten-Einstieg: eine einzige orchestrierte Bewegung ---------- */
+.rise {
+  animation: rise 900ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+.fender-in {
+  animation: fender-in 1400ms var(--ease-out) both;
+}
+
+/* Swatch-Auswahl */
+.swatch {
+  transition:
+    scale 160ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
+}
+.swatch:active {
+  scale: 0.92;
+}
+.swatch[aria-pressed="true"] {
+  box-shadow:
+    0 0 0 2px var(--black),
+    0 0 0 4px var(--white);
+}
+
+/* Buttons: Druck-Feedback */
+.btn {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    scale 140ms var(--ease-out);
+}
+.btn:active {
+  scale: 0.97;
+}
+
+/* Links mit Unterstreichung, die mitwächst */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 260ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
+
+/* Leistungs-Leiste: horizontal wischen, einrasten */
+.strip {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.strip::-webkit-scrollbar {
+  display: none;
+}
+.strip > * {
+  scroll-snap-align: start;
+}
+
+/* Menü-Overlay */
+.menu-sheet {
+  transform: translateX(-100%);
+  transition: transform 420ms var(--ease-out);
+}
+.menu-sheet[data-open] {
+  transform: none;
+}
+.menu-scrim {
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+.menu-scrim[data-open] {
+  opacity: 1;
+}
+
+
+
+  /* ---------- Pill-Button mit Pfeil-Kapsel ---------- */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    border-radius: 9999px;
+    padding: 0.4rem 0.4rem 0.4rem 1.4rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition:
+      background-color 300ms var(--ease-out),
+      color 300ms var(--ease-out),
+      box-shadow 300ms var(--ease-out),
+      scale 160ms var(--ease-out);
+  }
+  .cta:active {
+    scale: 0.98;
+  }
+  .cta-icon {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    transition: translate 400ms var(--ease-out), scale 400ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .cta:hover .cta-icon {
+      translate: 3px -1px;
+      scale: 1.05;
+    }
+  }
+  .cta-light {
+    background: var(--white);
+    color: var(--black);
+  }
+  .cta-light .cta-icon {
+    background: rgb(11 11 12 / 0.07);
+  }
+  .cta-dark {
+    background: var(--black);
+    color: var(--white);
+  }
+  .cta-dark .cta-icon {
+    background: rgb(255 255 255 / 0.12);
+  }
+  .cta-ghost {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    min-height: 3.05rem;
+    box-shadow: inset 0 0 0 1px currentColor;
+    opacity: 0.9;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .cta-ghost:hover {
+      opacity: 1;
+    }
+  }
+
+  /* ---------- Doppelrand: Schale + Kern ---------- */
+  .bezel {
+    border-radius: 1rem;
+    padding: 0.375rem;
+    background: rgb(11 11 12 / 0.035);
+    box-shadow: inset 0 0 0 1px rgb(11 11 12 / 0.06);
+  }
+  .bezel > .bezel-core {
+    border-radius: calc(1rem - 0.375rem);
+    overflow: hidden;
+    box-shadow:
+      inset 0 1px 1px rgb(255 255 255 / 0.18),
+      0 18px 40px -24px rgb(11 11 12 / 0.35);
+  }
+  .bezel-dark {
+    background: rgb(255 255 255 / 0.05);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08);
+  }
+
+  /* ---------- Scroll-Reveal: einmalig, schwer, mit leichter Unschärfe ---------- */
+  .js [data-reveal] {
+    opacity: 0;
+    translate: 0 2.5rem;
+    filter: blur(6px);
+    transition:
+      opacity 900ms var(--ease-out),
+      translate 1100ms var(--ease-out),
+      filter 900ms var(--ease-out);
+    transition-delay: var(--rd, 0ms);
+  }
+  .js [data-reveal][data-shown] {
+    opacity: 1;
+    translate: 0 0;
+    filter: none;
+  }
+
+  /* ---------- Burger -> X ---------- */
+  .burger {
+    position: relative;
+    width: 18px;
+    height: 12px;
+  }
+  .burger span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    border-radius: 2px;
+    background: currentColor;
+    transition:
+      translate 420ms var(--ease-out),
+      rotate 420ms var(--ease-out),
+      opacity 200ms ease;
+  }
+  .burger span:nth-child(1) {
+    top: 0;
+  }
+  .burger span:nth-child(2) {
+    top: 5.25px;
+  }
+  .burger span:nth-child(3) {
+    bottom: 0;
+  }
+  [aria-expanded="true"] .burger span:nth-child(1) {
+    translate: 0 5.25px;
+    rotate: 45deg;
+  }
+  [aria-expanded="true"] .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  [aria-expanded="true"] .burger span:nth-child(3) {
+    translate: 0 -5.25px;
+    rotate: -45deg;
+  }
+
+  /* ---------- Menü-Overlay: Glas, Links steigen gestaffelt auf ---------- */
+  .menu-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 450ms var(--ease-out),
+      visibility 0s linear 450ms;
+  }
+  .menu-overlay[data-open] {
+    opacity: 1;
+    visibility: visible;
+    transition:
+      opacity 450ms var(--ease-out),
+      visibility 0s;
+  }
+  .menu-item {
+    opacity: 0;
+    translate: 0 2.5rem;
+    transition:
+      opacity 500ms var(--ease-out),
+      translate 700ms var(--ease-out);
+  }
+  .menu-overlay[data-open] .menu-item {
+    opacity: 1;
+    translate: 0 0;
+    transition-delay: calc(120ms + var(--i, 0) * 55ms);
+  }
+
+  /* ---------- Live-Status: ruhiger Puls nur wenn geöffnet ---------- */
+  .open-status {
+    transition: opacity 400ms var(--ease-out);
+  }
+  .status-dot[data-open]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    animation: status-ping 2.4s var(--ease-out) infinite;
+  }
+
+  /* ---------- Leistungs-Index: Zeilen mit mitlaufender Lackprobe ---------- */
+  .svc-row .svc-arrow {
+    transition: translate 500ms var(--ease-out), background-color 300ms ease, color 300ms ease;
+  }
+  .svc-row .svc-name {
+    transition: translate 600ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .svc-row:hover .svc-name {
+      translate: 0.75rem 0;
+    }
+    .svc-row:hover .svc-arrow {
+      translate: 0.25rem 0;
+      background: var(--white);
+      color: var(--black);
+    }
+  }
+  .svc-preview {
+    opacity: 0;
+    scale: 0.92;
+    transition: opacity 350ms var(--ease-out), scale 500ms var(--ease-out);
+  }
+  .svc-preview[data-visible] {
+    opacity: 1;
+    scale: 1;
+  }
+
+  /* ---------- Sprühgang: neuer Lack zieht mit weicher Kante über das Blech ---------- */
+  .primer {
+    background-color: #2a2b2e;
+  }
+  .spray-pass {
+    -webkit-mask-image: linear-gradient(90deg, #000 44%, transparent 56%);
+    mask-image: linear-gradient(90deg, #000 44%, transparent 56%);
+    -webkit-mask-size: 300% 100%;
+    mask-size: 300% 100%;
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+    animation: spray-wipe 1500ms cubic-bezier(0.45, 0.05, 0.25, 1) both;
+  }
+  .spray-mist {
+    pointer-events: none;
+    mix-blend-mode: screen;
+    background:
+      radial-gradient(ellipse 9% 60% at 50% 40%, color-mix(in oklab, var(--paint), white 55%) 0%, transparent 70%),
+      radial-gradient(ellipse 14% 80% at 50% 55%, color-mix(in oklab, var(--paint), white 30%) 0%, transparent 70%);
+    filter: blur(14px);
+    opacity: 0;
+    animation: mist-travel 1500ms cubic-bezier(0.45, 0.05, 0.25, 1) both;
+  }
+
+  /* ---------- Überschriften: wie frisch lackiert, Farbe zieht von links ein ---------- */
+  .js [data-reveal] h2,
+  .js h2[data-reveal] {
+    -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 55%);
+    mask-image: linear-gradient(90deg, #000 45%, transparent 55%);
+    -webkit-mask-size: 300% 100%;
+    mask-size: 300% 100%;
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    transition:
+      -webkit-mask-position 1300ms cubic-bezier(0.45, 0.05, 0.25, 1),
+      mask-position 1300ms cubic-bezier(0.45, 0.05, 0.25, 1),
+      opacity 900ms var(--ease-out),
+      translate 1100ms var(--ease-out),
+      filter 900ms var(--ease-out);
+    transition-delay: calc(var(--rd, 0ms) + 120ms);
+  }
+  .js [data-reveal][data-shown] h2,
+  .js h2[data-reveal][data-shown] {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+
+  /* ---------- Fotos: Lichtleiste der Lackierkabine gleitet einmal darüber ---------- */
+  .sheen {
+    position: relative;
+    overflow: hidden;
+  }
+  .sheen::after {
+    content: "";
+    position: absolute;
+    inset: -10% auto -10% 0;
+    width: 35%;
+    pointer-events: none;
+    background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.32), transparent);
+    translate: -120% 0;
+  }
+  [data-shown] .sheen::after,
+  .sheen[data-shown]::after {
+    animation: sheen 1400ms var(--ease-in-out) calc(var(--rd, 0ms) + 350ms) 1 both;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover .sheen::after {
+      animation: sheen 1100ms var(--ease-in-out) 1 both;
+    }
+  }
+
+  /* ---------- Ablauf: Lackstrich wächst beim Scrollen die Schritte entlang ---------- */
+  .paint-track {
+    position: relative;
+  }
+  .paint-track::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * min(1.25rem, 2.5vw));
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 3px;
+    border-radius: 3px;
+    background: var(--paint);
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: background-color 900ms var(--ease-in-out);
+  }
+  @supports (animation-timeline: view()) {
+    .paint-track::before {
+      animation: paint-grow linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 70%;
+    }
+  }
+
+  /* ---------- Bewertungen: Endlosband ---------- */
+  .marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 4vw, #000 calc(100% - 4vw), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 4vw, #000 calc(100% - 4vw), transparent);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    padding-block: 0.5rem 1.5rem;
+    animation: marquee-ltr 80s linear infinite;
+  }
+  .marquee-item {
+    margin-right: 1.25rem;
+  }
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track,
+  .marquee[data-paused] .marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* ---------- Leistungs-Leiste: Fortschrittsbalken der automatischen Bewegung ---------- */
+  .strip-progress.is-running {
+    animation: strip-fill var(--step, 3800ms) linear both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+    padding-inline: 4vw;
+  }
+  .marquee-item[aria-hidden] {
+    display: none;
+  }
+  .spray-pass,
+  .spray-mist,
+  .paint-track::before {
+    animation: none !important;
+  }
+  .js [data-reveal] h2,
+  .js h2[data-reveal] {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .sheen::after {
+    display: none;
+  }
+  .status-dot[data-open]::after {
+    animation: none;
+  }
+  .js [data-reveal] {
+    translate: none;
+    filter: none;
+  }
+  .menu-item {
+    translate: none;
+  }
+  .rise,
+  .fender-in,
+  .paint-sweep {
+    animation: none;
+  }
+  .paint-surface,
+  .paint-flake {
+    transition-duration: 200ms;
+  }
+  .menu-sheet {
+    transition: opacity 200ms ease;
+    transform: none;
+    opacity: 0;
+  }
+  .menu-sheet[data-open] {
+    opacity: 1;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
