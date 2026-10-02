@@ -9,6 +9,7 @@ import { ContactSection } from "@/components/contact-section"
 import { Cta, CtaGhost } from "@/components/cta"
 import { services, site } from "@/lib/site"
 import { OpenStatus } from "@/components/open-status"
+import { essenDistricts, nearbyCities, serviceContent } from "@/lib/service-content"
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }))
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!s) return {}
   return {
     title: s.seoTitle,
-    description: `${s.short} R.O.M Cartech in Essen – Foto per WhatsApp senden.`.length <= 160
-      ? `${s.short} R.O.M Cartech in Essen – Foto per WhatsApp senden.`
+    description: `${s.short} R.O.M Cartech – für Essen & Umgebung.`.length <= 160
+      ? `${s.short} R.O.M Cartech – für Essen & Umgebung.`
       : `${s.short} R.O.M Cartech in Essen.`,
     alternates: { canonical: `/leistungen/${s.slug}` },
     openGraph: {
@@ -42,6 +43,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const prev = services[index - 1]
   const next = services[index + 1]
   const url = `${site.url}/leistungen/${s.slug}`
+  const c = serviceContent[s.slug]
+  const faqs = [...s.faqs, ...c.faqs]
 
   const jsonLd = [
     {
@@ -52,7 +55,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       image: `${site.url}/images/${s.image.name}-1600.webp`,
       url,
       serviceType: s.name,
-      areaServed: { "@type": "City", name: "Essen" },
+      areaServed: ["Essen", ...nearbyCities].map((name) => ({ "@type": "City", name })),
       provider: {
         "@type": "AutoBodyShop",
         name: site.name,
@@ -83,7 +86,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: s.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
     },
   ]
 
@@ -137,23 +140,59 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
-        {/* Worum es geht + Leistungsumfang */}
+        {/* Worum es geht + Leistungsumfang, jeder Punkt erklärt */}
         <section className="py-24 md:py-36">
-          <div className="mx-auto grid max-w-[1440px] gap-14 px-[4vw] lg:grid-cols-[7fr_5fr] lg:gap-24">
-            <p data-reveal className="display-sm max-w-[30ch] text-[clamp(1.4rem,2.4vw,2rem)]">
-              {s.intro}
-            </p>
+          <div className="mx-auto grid max-w-[1440px] gap-14 px-[4vw] lg:grid-cols-[5fr_7fr] lg:gap-24">
+            <div data-reveal className="lg:sticky lg:top-32 lg:self-start">
+              <p className="display-sm max-w-[30ch] text-[clamp(1.4rem,2.4vw,2rem)]">{s.intro}</p>
+            </div>
             <div data-reveal>
-              <h2 className="text-sm text-graphite">Das gehört dazu</h2>
-              <ul className="mt-4">
-                {s.points.map((p) => (
-                  <li key={p} className="flex gap-3 border-t border-black/10 py-4 last:border-b">
-                    <Check className="mt-1 h-4 w-4 shrink-0" strokeWidth={1.5} aria-hidden="true" />
-                    <span>{p}</span>
+              <h2 className="display-sm text-[clamp(1.6rem,2.6vw,2.25rem)]">Das gehört dazu</h2>
+              <ul data-reveal-group className="mt-8 border-t border-black/10">
+                {c.points.map((p) => (
+                  <li key={p.title} data-reveal className="grid gap-2 border-b border-black/10 py-6 md:grid-cols-[auto_1fr] md:gap-x-4">
+                    <Check className="mt-1 hidden h-4 w-4 shrink-0 md:block" strokeWidth={1.5} aria-hidden="true" />
+                    <h3 className="display-sm text-lg">{p.title}</h3>
+                    <p className="text-graphite md:col-start-2">{p.text}</p>
                   </li>
                 ))}
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* Ratgeber: ausführlicher Text mit Zwischenüberschriften, daneben das Werkstattfoto */}
+        <section className="pb-24 md:pb-36">
+          <div className="mx-auto grid max-w-[1440px] gap-14 px-[4vw] lg:grid-cols-[5fr_7fr] lg:gap-24">
+            <div data-reveal className="bezel hidden lg:sticky lg:top-32 lg:block lg:self-start">
+              <div className="bezel-core sheen relative aspect-[4/5]">
+                <Photo
+                  name={s.image.name}
+                  alt={s.image.alt}
+                  w={s.image.w}
+                  h={s.image.h}
+                  position={s.image.position}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+            </div>
+            <article className="max-w-[68ch]">
+              {c.article.map((a, i) => (
+                <div key={a.h} data-reveal className={i ? "mt-14" : ""}>
+                  <h2 className="display-sm text-[clamp(1.6rem,2.6vw,2.25rem)]">{a.h}</h2>
+                  {a.p.map((t) => (
+                    <p key={t.slice(0, 24)} className="mt-5 text-lg leading-relaxed text-graphite">
+                      {t}
+                    </p>
+                  ))}
+                </div>
+              ))}
+              <div data-reveal className="mt-12 flex flex-wrap gap-3">
+                <Cta href={site.whatsapp}>Foto per WhatsApp senden</Cta>
+                <CtaGhost href={`tel:${site.phoneHref}`}>{site.phone}</CtaGhost>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -180,14 +219,58 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
+        {/* Essen und Umgebung: für Kunden aus den Stadtteilen und Nachbarstädten */}
+        <section className="bg-black py-24 text-white md:py-36">
+          <div className="mx-auto grid max-w-[1440px] gap-14 px-[4vw] lg:grid-cols-2 lg:gap-24">
+            <div data-reveal>
+              <h2 className="display-sm text-[clamp(2rem,4vw,3.25rem)]">{c.local.h}</h2>
+              {c.local.p.map((t) => (
+                <p key={t.slice(0, 24)} className="mt-6 max-w-[52ch] text-lg text-white/70">
+                  {t}
+                </p>
+              ))}
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Cta href={site.whatsapp} tone="light">
+                  Foto per WhatsApp senden
+                </Cta>
+                <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="btn inline-flex items-center rounded-full px-5 py-3 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.25)] hover:text-white">
+                  Route planen
+                </a>
+              </div>
+            </div>
+            <div data-reveal className="grid content-start gap-10">
+              <div>
+                <h3 className="text-sm text-white/50">Essener Stadtteile</h3>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {essenDistricts.map((d) => (
+                    <li key={d} className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)]">
+                      Essen-{d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm text-white/50">Städte in der Umgebung</h3>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {nearbyCities.map((d) => (
+                    <li key={d} className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)]">
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Häufige Fragen: offen nebeneinander statt Akkordeon */}
         <section className="py-24 md:py-36">
           <div className="mx-auto grid max-w-[1440px] gap-12 px-[4vw] lg:grid-cols-[5fr_7fr] lg:gap-24">
             <h2 data-reveal className="display-sm text-[clamp(2rem,4vw,3.25rem)] lg:sticky lg:top-32 lg:self-start">
-              Häufige Fragen
+              Häufige Fragen zu {s.name}
             </h2>
             <dl data-reveal-group className="divide-y divide-black/10 border-y border-black/10">
-              {s.faqs.map((f) => (
+              {faqs.map((f) => (
                 <div key={f.q} data-reveal className="grid gap-3 py-8 md:grid-cols-[2fr_3fr] md:gap-10">
                   <dt className="display-sm text-lg">{f.q}</dt>
                   <dd className="text-graphite">{f.a}</dd>
