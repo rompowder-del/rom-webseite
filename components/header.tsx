@@ -54,9 +54,9 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
 
   return (
     <>
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-[var(--z-nav)] px-3 pt-3 md:px-6 md:pt-5">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-[var(--z-nav)] px-3 pt-3 md:px-[max(0.75rem,calc(4vw-1.75rem))] md:pt-5">
         <div
-          className={`pointer-events-auto mx-auto flex h-14 max-w-[1240px] items-center justify-between rounded-full pr-2 pl-5 transition-[background-color,box-shadow,color] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:h-16 md:pl-7 ${
+          className={`pointer-events-auto mx-auto flex h-14 max-w-[calc(1440px-8vw+3.5rem)] items-center justify-between rounded-full pr-2 pl-5 transition-[background-color,box-shadow,color] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:h-16 md:pl-[min(1.75rem,calc(4vw-0.75rem))] ${
             open
               ? "bg-transparent text-black"
               : scrolled
