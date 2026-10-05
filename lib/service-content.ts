@@ -356,10 +356,6 @@ export const serviceContent: Record<string, ServiceContent> = {
         q: "Woran erkenne ich, dass meine Felgen nachgedreht werden sollten?",
         a: "Typisch sind weiße, fadenförmige oder fleckige Stellen unter dem Klarlack, abblätternder Lack an der Front und Kratzer vom Bordstein. Ein Foto reicht uns für eine erste Einschätzung.",
       },
-      {
-        q: "Muss ich für das Glanzdrehen weit fahren?",
-        a: "Nicht, wenn Sie aus Essen oder dem Ruhrgebiet kommen: Wir haben die CNC-Drehbank in unserer Werkstatt im Essener Norden. Aus Gelsenkirchen, Bottrop oder Oberhausen sind Sie schnell bei uns.",
-      },
     ],
   },
 }

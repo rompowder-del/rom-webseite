@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { PaintHero } from "@/components/paint-hero"
 import { ServiceStrip } from "@/components/service-strip"
-import { Workshop } from "@/components/workshop"
 import { Reviews } from "@/components/reviews"
 import { ShadeFan } from "@/components/shade-fan"
 import { Process } from "@/components/process"
@@ -25,7 +24,6 @@ export default function Home() {
       <main id="inhalt">
         <PaintHero />
         <ServiceStrip />
-        <Workshop />
         <Process />
         <Reviews />
         <WhyUs />
