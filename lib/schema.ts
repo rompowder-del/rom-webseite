@@ -18,7 +18,11 @@ export function businessJsonLd() {
     },
     image: `${site.url}/opengraph-image`,
     hasMap: site.mapsUrl,
-    areaServed: "Essen",
+    areaServed: [
+      { "@type": "City", name: "Essen" },
+      { "@type": "AdministrativeArea", name: "Ruhrgebiet" },
+      { "@type": "State", name: "Nordrhein-Westfalen" },
+    ],
     makesOffer: services.map((sv) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name: sv.name, url: `${site.url}/leistungen/${sv.slug}` },

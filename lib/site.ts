@@ -42,6 +42,8 @@ export type Service = {
   name: string
   /** Seitentitel für Google (ohne Firmenname, der kommt automatisch dazu) */
   seoTitle: string
+  /** Zusatz unter dem Namen im Seitenkopf, z. B. "in Essen & im Ruhrgebiet" */
+  region: string
   short: string
   intro: string
   points: string[]
@@ -58,9 +60,10 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "fahrzeuglackierung",
+    region: "in Essen & im Ruhrgebiet",
     image: { name: "fahrzeuglackierung", alt: "Lackierer mit Lackierpistole beim Lackieren eines Stoßfängers in der Lackierkabine", w: 4065, h: 2710, position: "40% 50%" },
     name: "Fahrzeuglackierung",
-    seoTitle: "Fahrzeuglackierung in Essen – Original- & Wunschfarbton",
+    seoTitle: "Fahrzeuglackierung in Essen & im Ruhrgebiet – Original- & Wunschfarbton",
     short: "Professionelle Fahrzeuglackierungen in Original- oder Wunschfarbtönen – für Fahrzeuge, Karosseriebauteile und Motorradteile. Präzise Farbanpassung und hochwertiger Lackaufbau für ein makelloses Finish.",
     intro:
       "Ob das ganze Fahrzeug in neuer Farbe, Karosseriebauteile oder Motorradteile: Wir bereiten die Oberfläche sorgfältig vor, mischen den Farbton nach Lackcode oder Wunsch und bauen den Lack Schicht für Schicht bis zum Klarlack auf.",
@@ -87,9 +90,10 @@ export const services: Service[] = [
   },
   {
     slug: "instandsetzung-karosserie",
+    region: "in Essen & im Ruhrgebiet",
     image: { name: "instandsetzung-karosserie", alt: "Schwarzer Kombi bei der Karosserie-Instandsetzung, Rückleuchte ausgebaut", w: 1206, h: 1028, position: "50% 50%" },
     name: "Instandsetzung & Karosseriearbeiten",
-    seoTitle: "Instandsetzung & Karosseriearbeiten in Essen",
+    seoTitle: "Instandsetzung & Karosseriearbeiten in Essen & im Ruhrgebiet",
     short: "Dellen, Beulen und Unfallschäden fachgerecht beheben – vom Ausbeulen bis zur fertigen Lackierung.",
     intro:
       "Nach einem Schaden bringen wir die Karosserie wieder in Form: Wir richten Bleche, beheben Dellen und Beulen, tauschen beschädigte Teile und lackieren anschließend so, dass von der Reparatur nichts mehr zu sehen ist.",
@@ -116,9 +120,10 @@ export const services: Service[] = [
   },
   {
     slug: "polierung",
+    region: "in Essen & im Ruhrgebiet",
     image: { name: "polierung", alt: "Poliermaschine mit Polierschwamm am Heck eines schwarzen Fahrzeugs", w: 1206, h: 1592, position: "50% 55%" },
     name: "Polierung",
-    seoTitle: "Fahrzeugpolitur in Essen – Lackpolitur & Hochglanzfinish",
+    seoTitle: "Fahrzeugpolitur in Essen & im Ruhrgebiet – Lackpolitur & Hochglanz",
     short: "Professionelle Fahrzeug- und Teilepolitur für ein tiefes, gleichmäßiges Hochglanzfinish. Mehrstufige Politur, die feine Kratzer, matte Stellen und Lackdefekte sichtbar reduziert.",
     intro:
       "Feine Kratzer, matte Stellen und leichte Lackdefekte beeinträchtigen den Glanz eines Fahrzeugs. Mit einer professionellen, mehrstufigen Politur verfeinern wir die Lackoberfläche, reduzieren sichtbare Gebrauchsspuren und bringen den ursprünglichen Glanz zurück – für ein sauberes und hochwertiges Finish.",
@@ -145,9 +150,10 @@ export const services: Service[] = [
   },
   {
     slug: "pulverbeschichtung",
+    region: "in Essen – für Ruhrgebiet & NRW",
     image: { name: "pulverbeschichtung", alt: "Felge wird in der R.O.M-Cartech-Pulverkabine mit der Pistole pulverbeschichtet", w: 1206, h: 2143, position: "50% 60%" },
     name: "Pulverbeschichtung",
-    seoTitle: "Pulverbeschichtung von Felgen in Essen",
+    seoTitle: "Felgen pulverbeschichten in Essen – für Ruhrgebiet & NRW",
     short: "Die besonders widerstandsfähige Oberfläche für Felgen und Metallteile – in vielen RAL-Farbtönen.",
     intro:
       "Bei der Pulverbeschichtung wird Farbpulver elektrostatisch aufgetragen und im Ofen eingebrannt. Die Schicht ist dicker und schlagfester als Nasslack – ideal für Felgen, die Steinschlag, Streusalz und Bremsstaub aushalten müssen. Vorher entfernen wir die alte Beschichtung gründlich und materialschonend.",
@@ -174,9 +180,10 @@ export const services: Service[] = [
   },
   {
     slug: "cnc-glanzdrehen",
+    region: "in Essen – für Ruhrgebiet & NRW",
     image: { name: "cnc-glanzdrehen", alt: "Zweifarbige Alufelge auf der CNC-Drehbank beim Glanzdrehen", w: 1206, h: 1791, position: "50% 55%" },
     name: "CNC-Glanzdrehen",
-    seoTitle: "CNC-Glanzdrehen von Alufelgen in Essen",
+    seoTitle: "CNC-Glanzdrehen von Alufelgen in Essen – für Ruhrgebiet & NRW",
     short: "Das Hochglanz-Finish für zweifarbige Alufelgen – präzise nachgedreht wie ab Werk.",
     intro:
       "Viele moderne Alufelgen haben eine glanzgedrehte Front. Ist sie beschädigt oder korrodiert, drehen wir sie auf der CNC-Drehbank präzise nach und versiegeln sie anschließend mit Klarlack. So entsteht wieder das typische Hochglanz-Finish.",

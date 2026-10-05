@@ -41,6 +41,15 @@
     /* Sicherheitsnetz: nichts darf die Seite auf dem Handy seitlich verbreitern */
     overflow-x: clip;
   }
+  /* Lange deutsche Wörter (z. B. "Pulverbeschichtung") auf kleinen Handys trennen statt überstehen lassen */
+  @media (max-width: 639px) {
+    h1,
+    h2,
+    h3 {
+      hyphens: auto;
+      overflow-wrap: anywhere;
+    }
+  }
   a,
   button {
     touch-action: manipulation;

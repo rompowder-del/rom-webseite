@@ -113,7 +113,7 @@ export function PaintHero() {
         <h1 className="display rise max-w-[19ch] text-[clamp(1.85rem,min(6vw,8svh),5.25rem)] md:max-w-[22ch] md:text-[clamp(2.4rem,min(4.6vw,7.5svh),4.75rem)]">
           Präzision, Qualität und Perfektion bis ins Detail.{" "}
           <span className="mt-3 block max-w-[34ch] text-[0.32em] md:max-w-none md:text-[0.3em] max-sm:[@media(max-height:600px)]:hidden font-normal leading-snug tracking-normal text-white/65">
-            Fahrzeuglackierung, Karosseriearbeiten und hochwertige Oberflächenveredelung in Essen.
+            Fahrzeuglackierung, Karosseriearbeiten und hochwertige Oberflächenveredelung in Essen – für das Ruhrgebiet und ganz NRW.
           </span>
         </h1>
         <p

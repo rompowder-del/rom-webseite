@@ -95,7 +95,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Fahrzeuglackierung für Essen und Umgebung",
+      h: "Fahrzeuglackierung für Essen und das Ruhrgebiet",
       p: [
         "Unsere Lackiererei liegt im Essener Norden an der Krablerstraße 127 (Halle 36A). Wir sind für Autofahrer aus ganz Essen da – und weil die Werkstatt gut zu erreichen ist, lohnt sich der Weg auch aus den Nachbarstädten im Ruhrgebiet.",
         "Sie suchen eine Autolackiererei in Essen, Gelsenkirchen, Bottrop oder Oberhausen? Schicken Sie uns einfach ein Foto per WhatsApp. Wir sagen Ihnen, was zu tun ist, und vereinbaren einen Termin.",
@@ -158,7 +158,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Karosseriearbeiten für Essen und Umgebung",
+      h: "Karosseriearbeiten für Essen und das Ruhrgebiet",
       p: [
         "Sie finden uns im Essener Norden, Krablerstraße 127, Halle 36A. Für Kunden aus Altenessen, Vogelheim, Karnap, Borbeck oder Stoppenberg ist es nur ein kurzer Weg – und auch aus Gelsenkirchen, Bottrop, Gladbeck und Oberhausen sind wir schnell erreicht.",
         "Schicken Sie uns Fotos vom Schaden per WhatsApp, dann bekommen Sie eine erste Einschätzung, bevor Sie losfahren.",
@@ -222,7 +222,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Fahrzeugpolitur für Essen und Umgebung",
+      h: "Fahrzeugpolitur für Essen und das Ruhrgebiet",
       p: [
         "Unsere Werkstatt liegt im Essener Norden an der Krablerstraße 127. Ob aus Rüttenscheid, Borbeck, Steele oder Kray – oder aus Mülheim, Gelsenkirchen und Bottrop: Wir bringen den Lack Ihres Fahrzeugs wieder zum Glänzen.",
         "Vorab reichen ein paar Fotos per WhatsApp, damit wir den Zustand des Lacks einschätzen können.",
@@ -286,9 +286,9 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Pulverbeschichtung für Essen und das Ruhrgebiet",
+      h: "Pulverbeschichtung für Essen, das Ruhrgebiet und NRW",
       p: [
-        "Eine Pulverbeschichtung für Felgen findet man nicht in jeder Werkstatt. Mit unserer eigenen Pulverkabine in Essen sind wir eine Anlaufstelle für Kunden aus ganz Essen und aus Städten wie Gelsenkirchen, Bottrop, Gladbeck, Oberhausen, Mülheim, Bochum und Herne.",
+        "Eine Pulverbeschichtung für Felgen findet man nicht in jeder Werkstatt. Mit unserer eigenen Pulverkabine in Essen sind wir eine Anlaufstelle für Kunden aus ganz Essen, aus Städten wie Gelsenkirchen, Bottrop, Gladbeck, Oberhausen, Mülheim, Bochum und Herne – und für alle in NRW, die ihre Felgen in gute Hände geben möchten.",
         "Sie können uns die Felgen auch ohne Fahrzeug bringen. Schicken Sie uns vorab ein Foto und Ihre Wunschfarbe per WhatsApp.",
       ],
     },
@@ -345,9 +345,9 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "CNC-Glanzdrehen für Essen und Umgebung",
+      h: "CNC-Glanzdrehen für Essen, das Ruhrgebiet und NRW",
       p: [
-        "Für das Glanzdrehen braucht es eine CNC-Drehbank – die haben wir direkt in unserer Werkstatt in Essen. Ob aus Essen oder aus Gelsenkirchen, Bottrop, Oberhausen, Mülheim, Duisburg und Bochum: Ihre Felgen werden bei uns komplett bearbeitet und müssen nicht an einen weiteren Betrieb gegeben werden.",
+        "Für das Glanzdrehen braucht es eine CNC-Drehbank – die haben wir direkt in unserer Werkstatt in Essen. Ob aus Essen oder aus Gelsenkirchen, Bottrop, Oberhausen, Mülheim, Duisburg und Bochum: Ihre Felgen werden bei uns komplett bearbeitet und müssen nicht an einen weiteren Betrieb gegeben werden. Weil nicht jede Werkstatt eine CNC-Drehbank hat, lohnt sich der Weg nach Essen auch aus anderen Teilen von NRW.",
         "Am besten schicken Sie uns zuerst ein Foto Ihrer Felgen per WhatsApp. Wir sagen Ihnen dann, ob sie sich für das Glanzdrehen eignen.",
       ],
     },

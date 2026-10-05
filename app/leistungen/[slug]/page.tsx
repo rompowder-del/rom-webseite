@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!s) return {}
   return {
     title: s.seoTitle,
-    description: `${s.short.length > 150 ? s.short.split(". ")[0] + "." : s.short} R.O.M Cartech – für Essen & Umgebung.`,
+    description: `${s.short.length > 150 ? s.short.split(". ")[0] + "." : s.short} R.O.M Cartech – Essen, Ruhrgebiet & NRW.`,
     alternates: { canonical: `/leistungen/${s.slug}` },
     openGraph: {
       title: `${s.seoTitle} | R.O.M Cartech`,
@@ -53,7 +53,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       image: `${site.url}/images/${s.image.name}-1600.webp`,
       url,
       serviceType: s.name,
-      areaServed: ["Essen", ...nearbyCities].map((name) => ({ "@type": "City", name })),
+      areaServed: [
+        ...["Essen", ...nearbyCities].map((name) => ({ "@type": "City", name })),
+        { "@type": "AdministrativeArea", name: "Ruhrgebiet" },
+        { "@type": "State", name: "Nordrhein-Westfalen" },
+      ],
       provider: {
         "@type": "AutoBodyShop",
         name: site.name,
@@ -121,7 +125,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </nav>
             <h1 lang="de" className="display rise mt-8 max-w-[14ch] text-[clamp(2.1rem,6.5vw,5.75rem)] [hyphens:auto] [overflow-wrap:anywhere] sm:[hyphens:manual] sm:[overflow-wrap:normal]">
               {s.name}{" "}
-              <span className="mt-3 block text-[0.38em] font-normal tracking-normal text-white/65">in Essen</span>
+              <span className="mt-3 block text-[0.34em] font-normal tracking-normal text-white/65">{s.region}</span>
             </h1>
             <p className="rise mt-6 max-w-[46ch] text-lg text-white/80" style={{ ["--d" as string]: "100ms" }}>
               {s.short}
@@ -221,7 +225,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="bg-black py-24 text-white md:py-36">
           <div className="mx-auto grid max-w-[1440px] gap-14 px-[4vw] lg:grid-cols-2 lg:gap-24">
             <div data-reveal>
-              <h2 className="display-sm text-[clamp(2rem,4vw,3.25rem)]">{c.local.h}</h2>
+              <h2 lang="de" className="display-sm text-[clamp(1.7rem,4vw,3.25rem)] hyphens-auto [overflow-wrap:anywhere] sm:[overflow-wrap:normal]">{c.local.h}</h2>
               {c.local.p.map((t) => (
                 <p key={t.slice(0, 24)} className="mt-6 max-w-[52ch] text-lg text-white/70">
                   {t}

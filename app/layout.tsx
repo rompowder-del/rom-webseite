@@ -8,11 +8,11 @@ import { site } from "@/lib/site"
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Lackiererei in Essen – Lack, Karosserie & Felgen | R.O.M Cartech",
+    default: "Lackiererei in Essen, Ruhrgebiet & NRW – Lack, Karosserie & Felgen | R.O.M Cartech",
     template: "%s | R.O.M Cartech",
   },
   description:
-    "Lackiererei in Essen: Fahrzeuglackierung, Karosserie, Polierung, Pulverbeschichtung und CNC-Glanzdrehen – alles unter einem Dach. Foto per WhatsApp senden.",
+    "Lackiererei in Essen für das Ruhrgebiet und NRW: Fahrzeuglackierung, Karosserie, Polierung, Pulverbeschichtung und CNC-Glanzdrehen – alles unter einem Dach.",
   openGraph: { siteName: "R.O.M Cartech", locale: "de_DE", type: "website" },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },
