@@ -1,5 +1,23 @@
 @import "tailwindcss";
-@import "@fontsource-variable/archivo/standard.css";
+/* Schrift liegt auf der eigenen Seite (kein Google) und wird im <head> vorgeladen */
+@font-face {
+  font-family: "Archivo Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url(/fonts/archivo-latin-ext.woff2) format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Archivo Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url(/fonts/archivo-latin.woff2) format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
   --black: #0b0b0c; /* Off-Black statt reinem Schwarz */
@@ -182,6 +200,13 @@
     transform: none;
   }
 }
+/* Für die größten Texte im Startbild: nur Bewegung, keine Ausblendung –
+   so sieht Google den Inhalt sofort (schnellerer LCP) */
+@keyframes rise-in-place {
+  from {
+    transform: translateY(14px);
+  }
+}
 @keyframes fender-in {
   from {
     transform: translateY(14%);
@@ -243,11 +268,17 @@
 .paint-flake {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -0.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: overlay;
   opacity: 0;
   transition: opacity 900ms var(--ease-in-out);
   pointer-events: none;
+}
+/* Rauschen als Pseudo-Element: rein dekorativ, zählt so nicht als „größtes Element“ (LCP) */
+.paint-flake::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -0.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 [data-metallic] > .paint-flake {
   opacity: 0.55;
@@ -278,6 +309,10 @@
 /* ---------- Seiten-Einstieg: eine einzige orchestrierte Bewegung ---------- */
 .rise {
   animation: rise 900ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+.rise-text {
+  animation: rise-in-place 900ms var(--ease-out) both;
   animation-delay: var(--d, 0ms);
 }
 .fender-in {
@@ -718,6 +753,7 @@
     translate: none;
   }
   .rise,
+  .rise-text,
   .fender-in,
   .paint-sweep {
     animation: none;

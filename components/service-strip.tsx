@@ -6,12 +6,6 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { services, site } from "@/lib/site"
 import { Photo } from "@/components/photo"
 
-/** Querformat-Fotos füllen die hohe Karte (4:5) – dafür wird das Bild breiter geladen */
-function coverSizes(w: number, h: number) {
-  const f = Math.max(1, (1.25 * w) / h)
-  return `(min-width: 640px) ${Math.round(380 * f)}px, ${Math.round(80 * f)}vw`
-}
-
 /** Leistungen als Leiste zum Durchwischen – mit echten Fotos aus der Werkstatt */
 export function ServiceStrip() {
   const ref = useRef<HTMLUListElement>(null)
@@ -135,7 +129,8 @@ export function ServiceStrip() {
                     w={s.image.w}
                     h={s.image.h}
                     position={s.image.position}
-                    sizes={coverSizes(s.image.w, s.image.h)}
+                    sizes="(min-width: 640px) 380px, 80vw"
+                    card
                     className="absolute inset-0 h-full w-full transition-[scale] duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] [@media(hover:hover)]:group-hover:scale-[1.04]"
                   />
                   {/* Name direkt im Bild, unten auf dunklem Verlauf */}

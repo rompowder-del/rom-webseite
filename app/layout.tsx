@@ -5,6 +5,7 @@ import { RevealObserver } from "@/components/reveal-observer"
 import { MobileActionBar } from "@/components/mobile-action-bar"
 import { CookieBanner } from "@/components/cookie-banner"
 import { site } from "@/lib/site"
+import ReactDOM from "react-dom"
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -27,6 +28,8 @@ export const viewport: Viewport = {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  // Hauptschrift sofort mitladen, damit die Überschrift nicht erst später „umspringt“
+  ReactDOM.preload("/fonts/archivo-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" })
   return (
     <html lang="de" suppressHydrationWarning>
       <head>

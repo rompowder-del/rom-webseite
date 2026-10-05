@@ -110,14 +110,14 @@ export function PaintHero() {
         <p className="rise mb-5 inline-flex rounded-full bg-white/[0.08] px-3.5 py-1.5 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.1)] backdrop-blur-md">
           <OpenStatus />
         </p>
-        <h1 className="display rise max-w-[19ch] text-[clamp(1.85rem,min(6vw,8svh),5.25rem)] md:max-w-[22ch] md:text-[clamp(2.4rem,min(4.6vw,7.5svh),4.75rem)]">
+        <h1 className="display rise-text max-w-[19ch] text-[clamp(1.85rem,min(6vw,8svh),5.25rem)] md:max-w-[22ch] md:text-[clamp(2.4rem,min(4.6vw,7.5svh),4.75rem)]">
           Präzision, Qualität und Perfektion bis ins Detail.{" "}
           <span className="mt-3 block max-w-[34ch] text-[0.32em] md:max-w-none md:text-[0.3em] max-sm:[@media(max-height:600px)]:hidden font-normal leading-snug tracking-normal text-white/65">
             Fahrzeuglackierung, Karosseriearbeiten und hochwertige Oberflächenveredelung.
           </span>
         </h1>
         <p
-          className="rise mt-5 max-w-[58ch] text-[15px] lg:max-w-[72ch] max-sm:[@media(max-height:700px)]:hidden text-white/75 sm:text-base"
+          className="rise-text mt-5 max-w-[58ch] text-[15px] lg:max-w-[72ch] max-sm:[@media(max-height:700px)]:hidden text-white/75 sm:text-base"
           style={{ ["--d" as string]: "120ms" }}
         >
           Bei R.O.M Cartech verbinden wir handwerkliche Präzision mit modernen Verfahren und einem hohen
