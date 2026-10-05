@@ -2,10 +2,23 @@
  * Alle Firmendaten an EINER Stelle.
  * Werte in [eckigen Klammern] sind Platzhalter und müssen vor dem Livegang ersetzt werden.
  */
+/** Pflichtangaben für Impressum und Datenschutz – genau wie vom Inhaber geliefert */
+export const legal = {
+  name: "R.O.M CARTECH Lackiererei",
+  owner: "Omar El Ayoubi",
+  street: "Krablerstr. 127 / Halle 33 a",
+  city: "45326 Essen",
+  phone: "+49 (176) 61724202",
+  fax: "+49 (201) 61422208",
+  email: "ROMCartech@gmail.com",
+  ustId: "DE361345663",
+  wIdNr: "95 812 369 701",
+}
+
 export const site = {
   name: "R.O.M Cartech",
-  legalName: "[Firmierung laut Impressum der bisherigen Seite]",
-  owner: "[Inhaber laut Impressum]",
+  legalName: "R.O.M CARTECH Lackiererei",
+  owner: "Omar El Ayoubi",
   street: "Krablerstraße 127 / Halle 36A",
   city: "45326 Essen",
   phone: "+49 163 7856598",
