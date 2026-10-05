@@ -228,16 +228,7 @@ export const serviceContent: Record<string, ServiceContent> = {
         "Vorab reichen ein paar Fotos per WhatsApp, damit wir den Zustand des Lacks einschätzen können.",
       ],
     },
-    faqs: [
-      {
-        q: "Ist Polieren schädlich für den Lack?",
-        a: "Beim Polieren wird eine sehr dünne Schicht Klarlack abgetragen. Deshalb arbeiten wir schonend und nur so viel wie nötig, damit der Lack geschützt bleibt.",
-      },
-      {
-        q: "Polieren Sie auch für Kunden aus Mülheim oder Oberhausen?",
-        a: "Natürlich. Unsere Werkstatt in Essen ist aus dem ganzen westlichen Ruhrgebiet gut zu erreichen. Schicken Sie uns vorab ein paar Fotos Ihres Fahrzeugs per WhatsApp.",
-      },
-    ],
+    faqs: [],
   },
 
   pulverbeschichtung: {

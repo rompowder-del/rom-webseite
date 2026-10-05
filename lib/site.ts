@@ -141,9 +141,9 @@ export const services: Service[] = [
       { title: "Versiegeln", text: "Auf Wunsch versiegeln wir den Lack, damit Glanz und Schutz länger erhalten bleiben." },
     ],
     faqs: [
-      { q: "Was kann poliert werden?", a: "Der Lack des gesamten Fahrzeugs, einzelne Karosserieflächen sowie lackierte Fahrzeug- und Anbauteile. Sprechen Sie uns zu Ihrem Fahrzeug einfach an." },
-      { q: "Verschwinden durch Polieren alle Kratzer?", a: "Feine Kratzer und matte Stellen lassen sich deutlich reduzieren. Tiefe Kratzer, die durch den Klarlack gehen, kann eine Politur nicht vollständig entfernen – das sagen wir Ihnen vorab ehrlich." },
-      { q: "Wie lange hält der Glanz?", a: "Das hängt von Nutzung und Pflege ab. Eine Lackversiegelung schützt die Oberfläche zusätzlich." },
+      { q: "Welche Teile können poliert werden?", a: "Wir polieren Fahrzeuge, Fahrzeugteile und Anbauteile. Je nach Material und Zustand kommen dabei abgestimmte Polierverfahren zum Einsatz." },
+      { q: "Verschwinden durch Polieren alle Kratzer?", a: "Feine Kratzer, matte Stellen und leichte Lackdefekte können durch eine professionelle, mehrstufige Politur deutlich reduziert werden. Bei tieferen Schäden prüfen wir zunächst, welche Bearbeitung sinnvoll ist." },
+      { q: "Wie lange hält der Glanz?", a: "Die Haltbarkeit hängt von Nutzung und Pflege ab. Eine abschließende Versiegelung kann die Oberfläche zusätzlich schützen und den Glanz länger erhalten." },
     ],
     paint: "#b9bcc2",
     metallic: true,
