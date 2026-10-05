@@ -1,4 +1,4 @@
-/** Werkstattfoto in zwei vorbereiteten Größen (WebP). Keine Layout-Sprünge dank fester Maße. */
+/** Werkstattfoto in vier vorbereiteten Größen (WebP) – Handys laden nur, was sie brauchen. Keine Layout-Sprünge dank fester Maße. */
 export function Photo({
   name,
   alt,
@@ -18,11 +18,17 @@ export function Photo({
   position?: string
   priority?: boolean
 }) {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${name}-900.webp`}
-      srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${name}-900.webp 900w, ${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${name}-1600.webp ${Math.min(w, 1600)}w`}
+      src={`${base}/images/${name}-900.webp`}
+      srcSet={[
+        `${base}/images/${name}-400.webp 400w`,
+        `${base}/images/${name}-640.webp 640w`,
+        `${base}/images/${name}-900.webp 900w`,
+        `${base}/images/${name}-1600.webp ${Math.min(w, 1600)}w`,
+      ].join(", ")}
       sizes={sizes}
       alt={alt}
       width={w}
