@@ -23,11 +23,12 @@ export default function Home() {
       <Header overHero />
       <main id="inhalt">
         <PaintHero />
+        {/* Reihenfolge: Was wir machen → wie gut → warum wir → Beweis → so einfach geht's → Kontakt */}
         <ServiceStrip />
-        <Process />
-        <Reviews />
-        <WhyUs />
         <ShadeFan />
+        <WhyUs />
+        <Reviews />
+        <Process />
         <ContactSection />
       </main>
       <Footer />
