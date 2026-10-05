@@ -269,7 +269,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="py-24 md:py-36">
           <div className="mx-auto grid max-w-[1440px] gap-12 px-[4vw] lg:grid-cols-[5fr_7fr] lg:gap-24">
             <h2 data-reveal className="display-sm text-[clamp(2rem,4vw,3.25rem)] lg:sticky lg:top-32 lg:self-start">
-              Häufige Fragen zu {s.name}
+              {c.faqTitle ?? `Häufige Fragen zu ${s.name}`}
             </h2>
             <dl data-reveal-group className="divide-y divide-black/10 border-y border-black/10">
               {faqs.map((f) => (

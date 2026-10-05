@@ -13,6 +13,8 @@ export type ServiceContent = {
   local: { h: string; p: string[] }
   /** zusätzliche Fragen (werden an die vorhandenen angehängt) */
   faqs: { q: string; a: string }[]
+  /** eigene Überschrift über den Fragen (sonst "Häufige Fragen zu …") */
+  faqTitle?: string
 }
 
 /** Essener Stadtteile rund um die Werkstatt und Städte in der Umgebung */
@@ -287,14 +289,15 @@ export const serviceContent: Record<string, ServiceContent> = {
         "Sie können uns die Felgen auch ohne Fahrzeug bringen. Schicken Sie uns vorab ein Foto und Ihre Wunschfarbe per WhatsApp.",
       ],
     },
+    faqTitle: "Häufige Fragen zur Pulverbeschichtung von Felgen",
     faqs: [
       {
-        q: "Kann ich die Felgen ohne Auto bringen?",
-        a: "Ja. Für die Pulverbeschichtung brauchen wir nur die Felgen – Ihr Auto bleibt in der Zeit bei Ihnen.",
+        q: "Bieten Sie auch die Radmontage an?",
+        a: "Ja. Auf Wunsch übernehmen wir auch die Demontage und Montage der Räder am Fahrzeug. So erhalten Sie den kompletten Service aus einer Hand – von der Felgenaufbereitung und Pulverbeschichtung bis zur fertigen Montage.",
       },
       {
-        q: "Lohnt sich die Anfahrt aus Bochum oder Herne?",
-        a: "Unsere Werkstatt im Essener Norden ist aus dem Ruhrgebiet gut zu erreichen. Schicken Sie uns vorab Fotos und Ihre Wunschfarbe, dann klären wir alles Wichtige schon vor Ihrem Besuch.",
+        q: "Kann ich die Felgen ohne Fahrzeug vorbeibringen?",
+        a: "Ja. Sie können uns die demontierten Felgen direkt vorbeibringen. Alternativ übernehmen wir auf Wunsch die Demontage und Montage der Räder und Reifen für Sie.",
       },
     ],
   },

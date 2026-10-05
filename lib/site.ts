@@ -173,9 +173,9 @@ export const services: Service[] = [
       { title: "Montage", text: "Auf Wunsch übernehmen wir auch das Ab- und Aufziehen der Reifen sowie die Demontage und Montage der Räder am Fahrzeug." },
     ],
     faqs: [
-      { q: "Was ist der Unterschied zur Lackierung?", a: "Pulverbeschichtung ist dicker und deutlich widerstandsfähiger gegen Steinschlag und Streusalz. Eine Lackierung ist ideal, wenn ein Teil exakt im Fahrzeugfarbton lackiert werden soll." },
-      { q: "Welche Farben sind möglich?", a: "Eine große Auswahl an RAL- und Sonderfarben sowie Candy-, Flop-, Metallic- und Effektoberflächen – in Glanzgraden von Hochglanz bis Matt. Wir zeigen Ihnen die Möglichkeiten vor Ort." },
-      { q: "Muss ich die Reifen vorher abziehen lassen?", a: "Nein. Auf Wunsch übernehmen wir das Ab- und Aufziehen der Reifen sowie die Demontage und Montage der Räder am Fahrzeug." },
+      { q: "Was ist der Unterschied zwischen Pulverbeschichtung und Lackierung?", a: "Bei Felgen bietet die Pulverbeschichtung eine besonders robuste und langlebige Oberfläche. Das Verfahren eignet sich hervorragend für die tägliche Belastung durch Bremsstaub, Streusalz, Steinschläge und Witterung. Für Felgen ist die Pulverbeschichtung daher eine hochwertige Alternative zur klassischen Nasslackierung." },
+      { q: "Welche Farben und Effekte sind möglich?", a: "Neben zahlreichen RAL-Farbtönen bieten wir auch Candy-, Flop-, Effekt-, Metallic- und weitere Sonderfarben an – jeweils in Glanzgraden von Hochglanz bis Matt. Wir zeigen Ihnen die Möglichkeiten gern vor Ort." },
+      { q: "Müssen die Reifen für die Pulverbeschichtung demontiert werden?", a: "Ja. Für eine fachgerechte Pulverbeschichtung müssen die Reifen von den Felgen abgezogen werden. Auf Wunsch übernehmen wir die komplette Montage für Sie – vom Abziehen der Reifen und Demontieren der Anbauteile bis zur anschließenden Montage und Auswuchtung." },
     ],
     paint: "#2b2c2e",
     metallic: true,
