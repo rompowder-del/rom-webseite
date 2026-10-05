@@ -43,7 +43,7 @@ export function PaintHero() {
     <section
       className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-black text-white"
       onPointerMove={onPointerMove}
-      aria-label="R.O.M Cartech – Lackierung und Felgenveredelung in Essen"
+      aria-label="R.O.M Cartech – Fahrzeuglackierung, Karosseriearbeiten und Oberflächenveredelung in Essen"
     >
       {/* Lackfläche */}
       <div className="fender-in pointer-events-none absolute inset-x-0 bottom-0 h-[42%] sm:h-[56%] md:h-[70%]">
@@ -110,18 +110,20 @@ export function PaintHero() {
         <p className="rise mb-5 inline-flex rounded-full bg-white/[0.08] px-3.5 py-1.5 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.1)] backdrop-blur-md">
           <OpenStatus />
         </p>
-        <h1 className="display rise max-w-[14ch] text-[clamp(2.3rem,min(7vw,9.5svh),6rem)]">
-          Oberflächen, die wie neu aussehen.{" "}
-          <span className="mt-3 block text-[0.3em] font-normal leading-snug tracking-normal text-white/65">
-            Lackiererei &amp; Felgenveredelung in Essen
+        <h1 className="display rise max-w-[19ch] text-[clamp(1.85rem,min(6vw,8svh),5.25rem)] md:max-w-[22ch] md:text-[clamp(2.4rem,min(4.6vw,7.5svh),4.75rem)]">
+          Präzision, Qualität und Perfektion bis ins Detail.{" "}
+          <span className="mt-3 block max-w-[34ch] text-[0.32em] md:max-w-none md:text-[0.3em] max-sm:[@media(max-height:600px)]:hidden font-normal leading-snug tracking-normal text-white/65">
+            Fahrzeuglackierung, Karosseriearbeiten und hochwertige Oberflächenveredelung in Essen.
           </span>
         </h1>
         <p
-          className="rise mt-5 max-w-[46ch] text-[15px] max-sm:[@media(max-height:700px)]:hidden text-white/75 sm:text-base md:text-lg"
+          className="rise mt-5 max-w-[58ch] text-[15px] lg:max-w-[72ch] max-sm:[@media(max-height:700px)]:hidden text-white/75 sm:text-base"
           style={{ ["--d" as string]: "120ms" }}
         >
-          Fahrzeuglackierung, Karosseriearbeiten, Polierung, Pulverbeschichtung und CNC-Glanzdrehen in Essen – alles
-          unter einem Dach, mit persönlicher Beratung und kurzen Wartezeiten.
+          Bei R.O.M Cartech verbinden wir handwerkliche Präzision mit modernen Verfahren und einem hohen
+          Qualitätsanspruch. Von professionellen Fahrzeuglackierungen und Karosserieinstandsetzungen über
+          Pulverbeschichtung bis hin zum CNC-Glanzdrehen bieten wir maßgeschneiderte Lösungen für Fahrzeuge, Felgen und
+          Motorradteile.
         </p>
         <div className="rise mt-7 mb-10 flex flex-wrap gap-3 md:mb-8" style={{ ["--d" as string]: "220ms" }}>
           <Cta href={site.whatsapp} tone="light">
@@ -131,7 +133,7 @@ export function PaintHero() {
             {site.phone}
           </CtaGhost>
         </div>
-        <ul className="rise -mt-3 mb-10 hidden md:mb-6 flex-wrap gap-x-6 gap-y-2 text-sm text-white/65 sm:flex" style={{ ["--d" as string]: "300ms" }}>
+        <ul className="rise -mt-3 mb-10 hidden md:mb-6 flex-wrap gap-x-6 gap-y-2 text-sm text-white/65 sm:flex md:[@media(max-height:820px)]:hidden" style={{ ["--d" as string]: "300ms" }}>
           {["Persönliche Beratung", "Individuelles Angebot", "Kurze Wartezeiten"].map((t) => (
             <li key={t} className="flex items-center gap-2">
               <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7" /></svg>

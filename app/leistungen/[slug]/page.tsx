@@ -21,9 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!s) return {}
   return {
     title: s.seoTitle,
-    description: `${s.short} R.O.M Cartech – für Essen & Umgebung.`.length <= 160
-      ? `${s.short} R.O.M Cartech – für Essen & Umgebung.`
-      : `${s.short} R.O.M Cartech in Essen.`,
+    description: `${s.short.length > 150 ? s.short.split(". ")[0] + "." : s.short} R.O.M Cartech – für Essen & Umgebung.`,
     alternates: { canonical: `/leistungen/${s.slug}` },
     openGraph: {
       title: `${s.seoTitle} | R.O.M Cartech`,

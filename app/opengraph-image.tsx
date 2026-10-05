@@ -22,7 +22,7 @@ export default function OG() {
       >
         <div style={{ fontSize: 26, letterSpacing: 10 }}>R.O.M CARTECH</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 84, lineHeight: 1.02, letterSpacing: -2 }}>Oberflächen, die wie neu aussehen.</div>
+          <div style={{ fontSize: 84, lineHeight: 1.02, letterSpacing: -2 }}>Präzision, Qualität und Perfektion bis ins Detail.</div>
           <div style={{ fontSize: 30, marginTop: 24, opacity: 0.7 }}>Lackierung · Karosserie · Pulverbeschichtung · CNC-Glanzdrehen · Essen</div>
         </div>
       </div>

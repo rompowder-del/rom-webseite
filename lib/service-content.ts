@@ -52,23 +52,23 @@ export const serviceContent: Record<string, ServiceContent> = {
   fahrzeuglackierung: {
     points: [
       {
-        title: "Teillackierung einzelner Bauteile",
-        text: "Kratzer im Stoßfänger, ein Parkrempler an der Tür oder Steinschläge auf der Motorhaube: Oft reicht es, nur das betroffene Bauteil zu lackieren. Das spart Zeit und Kosten – und der Übergang zum restlichen Fahrzeug bleibt unsichtbar.",
+        title: "Komplettlackierungen im Original- oder Wunschfarbton",
+        text: "Wenn der Lack großflächig verblasst ist oder Ihr Fahrzeug einen neuen Look bekommen soll, lackieren wir es komplett – originalgetreu oder in einer Farbe Ihrer Wahl, ob uni, metallic oder perleffekt.",
       },
       {
-        title: "Komplettlackierung im Original- oder Wunschfarbton",
-        text: "Wenn der Lack großflächig verblasst ist oder Sie Ihrem Auto einen neuen Look geben möchten, lackieren wir das komplette Fahrzeug – originalgetreu oder in einer Farbe Ihrer Wahl, ob uni, metallic oder perleffekt.",
+        title: "Lackierung von Fahrzeugkarosserien und Bauteilen",
+        text: "Ob ganze Karosserie oder einzelne Karosseriebauteile wie Türen, Kotflügel, Hauben oder Stoßfänger: Jede Fläche wird sorgfältig vorbereitet und so lackiert, dass sie sauber zum restlichen Fahrzeug passt.",
       },
       {
-        title: "Farbton nach Lackcode, abgestimmt am Fahrzeug",
-        text: "Jeder Hersteller vergibt einen Lackcode. Danach mischen wir den Farbton und gleichen ihn am Fahrzeug ab, denn Lack verändert sich mit den Jahren durch Sonne und Witterung. So passt die neue Stelle zum vorhandenen Lack.",
+        title: "Lackierung von Motorradteilen und Verkleidungsteilen",
+        text: "Tank, Verkleidung, Kotflügel oder Seitenteile: Auch Motorradteile lackieren wir im Originalfarbton oder ganz individuell in Ihrer Wunschfarbe.",
       },
       {
-        title: "Lackierung von Felgen und Anbauteilen",
-        text: "Spiegelkappen, Grill, Spoiler, Zierleisten oder Felgen: Auch einzelne Anbauteile lackieren wir – zum Beispiel in Wagenfarbe, in Schwarz glänzend oder als bewusster Farbakzent.",
+        title: "Individuelle Farbanpassung nach Lackcode",
+        text: "Jeder Hersteller vergibt einen Lackcode. Danach mischen wir den Farbton und gleichen ihn am Fahrzeug ab, denn Lack verändert sich mit den Jahren durch Sonne und Witterung. So passt die neue Lackierung zum vorhandenen Lack.",
       },
       {
-        title: "Mehrschichtiger Aufbau mit Klarlack",
+        title: "Hochwertiger Mehrschicht-Lackaufbau mit Klarlack",
         text: "Grundierung, Basislack und Klarlack werden in mehreren Schichten aufgebaut. Der Klarlack gibt Tiefe und Glanz und schützt die Farbe vor UV-Strahlung, Waschanlage und Witterung.",
       },
     ],
@@ -76,21 +76,21 @@ export const serviceContent: Record<string, ServiceContent> = {
       {
         h: "Autolackierung in Essen – worauf es ankommt",
         p: [
-          "Eine gute Lackierung sieht man nicht. Das klingt widersprüchlich, ist aber der Anspruch: Nach der Reparatur soll niemand erkennen, dass an Ihrem Fahrzeug etwas gemacht wurde. Dafür braucht es drei Dinge – eine sorgfältige Vorbereitung, den richtigen Farbton und einen sauberen Lackaufbau.",
+          "Eine gute Lackierung erkennt man an ihrem Finish: gleichmäßiger Glanz, saubere Kanten und ein Farbton, der stimmt. Dafür braucht es drei Dinge – eine sorgfältige Vorbereitung, die richtige Farbanpassung und einen hochwertigen Lackaufbau.",
           "Den größten Teil der Arbeit sieht man am Ende gar nicht: Schleifen, Spachteln, Grundieren und Abkleben. Jede Unebenheit, die hier bleibt, zeichnet sich später im glänzenden Lack ab. Deshalb nehmen wir uns für die Vorbereitung die nötige Zeit.",
         ],
       },
       {
-        h: "Teillackierung oder Komplettlackierung?",
+        h: "Komplettlackierung, Karosseriebauteile und Motorradteile",
         p: [
-          "Bei Kratzern, Dellen oder kleineren Unfallschäden ist eine Teillackierung meist die wirtschaftlichste Lösung. Wir lackieren dabei nur die betroffenen Bauteile und gleichen bei Bedarf die angrenzenden Flächen an, damit kein Farbunterschied entsteht.",
-          "Eine Komplettlackierung lohnt sich, wenn der Lack an vielen Stellen verwittert ist, bei Oldtimern und Liebhaberfahrzeugen oder wenn Sie die Farbe Ihres Autos ändern möchten. Welche Variante bei Ihrem Fahrzeug sinnvoll ist, besprechen wir ehrlich mit Ihnen – am besten anhand von ein paar Fotos.",
+          "Eine Komplettlackierung lohnt sich, wenn der Lack an vielen Stellen verwittert ist, bei Oldtimern und Liebhaberfahrzeugen oder wenn Sie die Farbe Ihres Fahrzeugs ändern möchten. Ebenso lackieren wir einzelne Karosseriebauteile sowie Motorradteile und Verkleidungen.",
+          "Welche Lösung für Ihr Vorhaben die richtige ist, besprechen wir ehrlich mit Ihnen – am besten anhand von ein paar Fotos per WhatsApp.",
         ],
       },
       {
         h: "Der richtige Farbton",
         p: [
-          "Den Lackcode Ihres Fahrzeugs finden Sie meist auf einem Typenschild im Türrahmen, unter der Motorhaube oder im Serviceheft. Er ist der Ausgangspunkt. Weil sich Lack mit der Zeit verändert, stimmen wir den gemischten Ton zusätzlich am Fahrzeug ab. So passt die Reparatur auch bei älteren Fahrzeugen zum Rest.",
+          "Den Lackcode Ihres Fahrzeugs finden Sie meist auf einem Typenschild im Türrahmen, unter der Motorhaube oder im Serviceheft. Er ist der Ausgangspunkt. Weil sich Lack mit der Zeit verändert, stimmen wir den gemischten Ton zusätzlich am Fahrzeug ab. Und wenn Sie eine ganz neue Farbe möchten, beraten wir Sie zu Farbton und Effekt.",
         ],
       },
     ],
@@ -179,59 +179,63 @@ export const serviceContent: Record<string, ServiceContent> = {
   polierung: {
     points: [
       {
-        title: "Hochglanzpolitur für Aluminium",
-        text: "Poliertes Aluminium hat einen Glanz, den kein Lack erreicht. In mehreren Durchgängen mit immer feineren Mitteln bringen wir die Oberfläche auf Hochglanz.",
+        title: "Mehrstufige Fahrzeugpolitur",
+        text: "In mehreren Durchgängen mit immer feineren Polituren verfeinern wir den Lack Schritt für Schritt – bis zu einem tiefen, gleichmäßigen Glanz.",
       },
       {
-        title: "Entfernt feine Kratzer und matte Stellen",
-        text: "Waschanlage, Bremsstaub und Witterung hinterlassen feine Kratzer und einen grauen Schleier. Beim Polieren tragen wir diese Schicht ab, bis die Oberfläche wieder klar und glänzend ist.",
+        title: "Aufbereitung von Fahrzeuglack und Karosserieflächen",
+        text: "Ob das ganze Fahrzeug oder einzelne Karosserieflächen: Wir bereiten den Lack auf und geben ihm Farbtiefe und Brillanz zurück.",
       },
       {
-        title: "Für Felgen sowie Zier- und Anbauteile",
-        text: "Wir polieren vor allem Aluminiumfelgen, aber auch Zierleisten und andere Metallteile. Sprechen Sie uns zu Ihrem Teil einfach an – wir sagen Ihnen, ob es sich eignet.",
+        title: "Politur von Fahrzeug- und Anbauteilen",
+        text: "Auch einzelne lackierte Fahrzeug- und Anbauteile polieren wir – zum Beispiel nach einer Lackierung oder wenn ein Teil matter wirkt als der Rest.",
       },
       {
-        title: "Optional mit schützender Versiegelung",
-        text: "Blankes Aluminium reagiert mit Luft und Feuchtigkeit. Eine Versiegelung schützt die polierte Oberfläche und hilft, dass der Glanz länger erhalten bleibt.",
+        title: "Reduzierung feiner Kratzer und matter Lackstellen",
+        text: "Waschanlage, Bürsten und Witterung hinterlassen feine Kratzer, Hologramme und matte Stellen. Eine fachgerechte Politur reduziert diese Gebrauchsspuren sichtbar.",
+      },
+      {
+        title: "Hochglanzfinish mit optionaler Lackversiegelung",
+        text: "Zum Abschluss sorgt die Feinpolitur für ein Hochglanzfinish. Auf Wunsch versiegeln wir den Lack, damit Glanz und Schutz länger erhalten bleiben.",
       },
     ],
     article: [
       {
-        h: "Felgen polieren lassen in Essen",
+        h: "Fahrzeug polieren lassen in Essen",
         p: [
-          "Polierte Felgen sind ein echter Blickfang. Mit der Zeit verlieren sie aber ihren Glanz: Feine Kratzer, Bremsstaub und Oxidation machen die Oberfläche matt und fleckig. Mit einer fachgerechten Politur holen wir die Tiefe und den Spiegelglanz zurück.",
-          "Dafür arbeiten wir in Stufen: Erst werden tiefere Spuren in feinen Schritten herausgeschliffen, dann folgt die eigentliche Politur mit immer feineren Mitteln. Jeder Schritt baut auf dem vorherigen auf – deshalb lässt sich ein gutes Polierergebnis nicht abkürzen.",
+          "Mit der Zeit verliert jeder Lack an Glanz. Feine Kratzer aus der Waschanlage, matte Stellen und leichte Lackdefekte lassen selbst gepflegte Fahrzeuge stumpf aussehen. Mit einer professionellen Politur holen wir Tiefe und Brillanz zurück.",
+          "Dafür arbeiten wir in Stufen: Zuerst wird der Lack gründlich gereinigt und vorbereitet, dann folgen mehrere Politurdurchgänge mit immer feineren Mitteln. Jeder Schritt baut auf dem vorherigen auf – deshalb lässt sich ein gutes Polierergebnis nicht abkürzen.",
         ],
       },
       {
-        h: "Was Polieren kann – und was nicht",
+        h: "Was eine Politur kann – und was nicht",
         p: [
-          "Polieren entfernt feine Kratzer, matte Stellen und Oxidation. Tiefe Kratzer, Bordsteinschäden oder Abplatzer müssen vorher ausgebessert werden. Wir sehen uns Ihre Teile vorab an und sagen Ihnen ehrlich, welches Ergebnis realistisch ist.",
-          "Ist eine Felge stark beschädigt oder soll sie eine neue Farbe bekommen, kann auch eine Pulverbeschichtung oder Lackierung die bessere Wahl sein. Wir beraten Sie dazu gern.",
+          "Eine Politur verfeinert die oberste Lackschicht. Feine Kratzer, Hologramme und matte Stellen werden dadurch deutlich reduziert. Tiefe Kratzer, die bis in den Basislack oder die Grundierung reichen, kann eine Politur nicht vollständig entfernen.",
+          "Wir sehen uns Ihr Fahrzeug vorab an und sagen Ihnen ehrlich, welches Ergebnis realistisch ist. Ist ein Schaden zu tief, kann eine Lackierung die bessere Lösung sein – auch dazu beraten wir Sie gern.",
         ],
       },
       {
         h: "Damit der Glanz lange hält",
         p: [
-          "Polierte Oberflächen danken eine schonende Pflege: mildes Reinigungsmittel, weiche Tücher und regelmäßiges Entfernen von Bremsstaub. Eine Versiegelung gibt zusätzlichen Schutz.",
+          "Ein frisch polierter Lack dankt eine schonende Pflege: Handwäsche statt Bürstenwaschanlage, weiche Mikrofasertücher und milde Reinigungsmittel. Eine Lackversiegelung gibt zusätzlichen Schutz vor Witterung und Schmutz.",
         ],
       },
     ],
     local: {
-      h: "Polierung für Essen und Umgebung",
+      h: "Fahrzeugpolitur für Essen und Umgebung",
       p: [
-        "Unsere Werkstatt liegt im Essener Norden an der Krablerstraße 127. Ob aus Rüttenscheid, Borbeck, Steele oder Kray – oder aus Mülheim, Gelsenkirchen und Bottrop: Bringen Sie Ihre Felgen oder Teile einfach während unserer Öffnungszeiten vorbei.",
-        "Vorab reicht ein Foto per WhatsApp, damit wir den Zustand einschätzen können.",
+        "Unsere Werkstatt liegt im Essener Norden an der Krablerstraße 127. Ob aus Rüttenscheid, Borbeck, Steele oder Kray – oder aus Mülheim, Gelsenkirchen und Bottrop: Wir bringen den Lack Ihres Fahrzeugs wieder zum Glänzen.",
+        "Vorab reichen ein paar Fotos per WhatsApp, damit wir den Zustand des Lacks einschätzen können.",
       ],
     },
     faqs: [
       {
-        q: "Kann ich nur die Felgen vorbeibringen?",
-        a: "Ja. Für die Politur brauchen wir die Felgen, nicht das ganze Fahrzeug. Sprechen Sie uns vorher kurz an, damit wir besprechen, ob die Reifen abgezogen werden müssen.",
+        q: "Ist Polieren schädlich für den Lack?",
+        a: "Beim Polieren wird eine sehr dünne Schicht Klarlack abgetragen. Deshalb arbeiten wir schonend und nur so viel wie nötig, damit der Lack geschützt bleibt.",
       },
       {
         q: "Polieren Sie auch für Kunden aus Mülheim oder Oberhausen?",
-        a: "Natürlich. Unsere Werkstatt in Essen ist aus dem ganzen westlichen Ruhrgebiet gut zu erreichen. Schicken Sie uns vorab ein Foto Ihrer Teile per WhatsApp.",
+        a: "Natürlich. Unsere Werkstatt in Essen ist aus dem ganzen westlichen Ruhrgebiet gut zu erreichen. Schicken Sie uns vorab ein paar Fotos Ihres Fahrzeugs per WhatsApp.",
       },
     ],
   },
