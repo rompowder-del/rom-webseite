@@ -9,7 +9,7 @@ import { ContactSection } from "@/components/contact-section"
 import { Cta, CtaGhost } from "@/components/cta"
 import { services, site } from "@/lib/site"
 import { OpenStatus } from "@/components/open-status"
-import { essenDistricts, nearbyCities, serviceContent } from "@/lib/service-content"
+import { nearbyCities, serviceContent } from "@/lib/service-content"
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }))
@@ -124,8 +124,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </ol>
             </nav>
             <h1 lang="de" className="display rise mt-8 max-w-[14ch] text-[clamp(2.1rem,6.5vw,5.75rem)] [hyphens:auto] [overflow-wrap:anywhere] sm:[hyphens:manual] sm:[overflow-wrap:normal]">
-              {s.name}{" "}
-              <span className="mt-3 block text-[0.34em] font-normal tracking-normal text-white/65">{s.region}</span>
+              {s.name}
             </h1>
             <p className="rise mt-6 max-w-[46ch] text-lg text-white/80" style={{ ["--d" as string]: "100ms" }}>
               {s.short}
@@ -221,7 +220,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
-        {/* Essen und Umgebung: für Kunden aus den Stadtteilen und Nachbarstädten */}
+        {/* Ihr Weg zu uns: Adresse und Öffnungszeiten */}
         <section className="bg-black py-24 text-white md:py-36">
           <div className="mx-auto grid max-w-[1440px] gap-14 px-[4vw] lg:grid-cols-2 lg:gap-24">
             <div data-reveal>
@@ -240,28 +239,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </a>
               </div>
             </div>
-            <div data-reveal className="grid content-start gap-10">
-              <div>
-                <h3 className="text-sm text-white/50">Essener Stadtteile</h3>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {essenDistricts.map((d) => (
-                    <li key={d} className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)]">
-                      Essen-{d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm text-white/50">Städte in der Umgebung</h3>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {nearbyCities.map((d) => (
-                    <li key={d} className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-sm text-white/85 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)]">
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <dl data-reveal className="grid content-start gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2">
+              {[
+                ["Adresse", `${site.street}\n${site.city}`],
+                ["Öffnungszeiten", "Mo – Fr 9 – 17 Uhr\nSa 9 – 13 Uhr"],
+                ["Telefon", site.phone],
+                ["E-Mail", site.email],
+              ].map(([k, v]) => (
+                <div key={k} className="bg-black p-6 md:p-7">
+                  <dt className="text-sm text-white/50">{k}</dt>
+                  <dd className="mt-2 whitespace-pre-line break-words text-lg">{v}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 

@@ -42,8 +42,6 @@ export type Service = {
   name: string
   /** Seitentitel für Google (ohne Firmenname, der kommt automatisch dazu) */
   seoTitle: string
-  /** Zusatz unter dem Namen im Seitenkopf, z. B. "in Essen & im Ruhrgebiet" */
-  region: string
   short: string
   intro: string
   points: string[]
@@ -60,7 +58,6 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "fahrzeuglackierung",
-    region: "in Essen & im Ruhrgebiet",
     image: { name: "fahrzeuglackierung", alt: "Lackierer mit Lackierpistole beim Lackieren eines Stoßfängers in der Lackierkabine", w: 4065, h: 2710, position: "40% 50%" },
     name: "Fahrzeuglackierung",
     seoTitle: "Fahrzeuglackierung in Essen & im Ruhrgebiet – Original- & Wunschfarbton",
@@ -90,7 +87,6 @@ export const services: Service[] = [
   },
   {
     slug: "instandsetzung-karosserie",
-    region: "in Essen & im Ruhrgebiet",
     image: { name: "instandsetzung-karosserie", alt: "Schwarzer Kombi bei der Karosserie-Instandsetzung, Rückleuchte ausgebaut", w: 1206, h: 1028, position: "50% 50%" },
     name: "Instandsetzung & Karosseriearbeiten",
     seoTitle: "Instandsetzung & Karosseriearbeiten in Essen & im Ruhrgebiet",
@@ -120,7 +116,6 @@ export const services: Service[] = [
   },
   {
     slug: "polierung",
-    region: "in Essen & im Ruhrgebiet",
     image: { name: "polierung", alt: "Poliermaschine mit Polierschwamm am Heck eines schwarzen Fahrzeugs", w: 1206, h: 1592, position: "50% 55%" },
     name: "Polierung",
     seoTitle: "Fahrzeugpolitur in Essen & im Ruhrgebiet – Lackpolitur & Hochglanz",
@@ -150,7 +145,6 @@ export const services: Service[] = [
   },
   {
     slug: "pulverbeschichtung",
-    region: "in Essen – für Ruhrgebiet & NRW",
     image: { name: "pulverbeschichtung", alt: "Felge wird in der R.O.M-Cartech-Pulverkabine mit der Pistole pulverbeschichtet", w: 1206, h: 2143, position: "50% 60%" },
     name: "Pulverbeschichtung",
     seoTitle: "Felgen pulverbeschichten in Essen – für Ruhrgebiet & NRW",
@@ -182,7 +176,6 @@ export const services: Service[] = [
   },
   {
     slug: "cnc-glanzdrehen",
-    region: "in Essen – für Ruhrgebiet & NRW",
     image: { name: "cnc-glanzdrehen", alt: "Zweifarbige Alufelge auf der CNC-Drehbank beim Glanzdrehen", w: 1206, h: 1791, position: "50% 55%" },
     name: "CNC-Glanzdrehen",
     seoTitle: "CNC-Glanzdrehen von Alufelgen in Essen – für Ruhrgebiet & NRW",

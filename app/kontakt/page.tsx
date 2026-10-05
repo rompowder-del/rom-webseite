@@ -66,8 +66,7 @@ export default function KontaktPage() {
               <OpenStatus />
             </p>
             <h1 className="display rise max-w-[14ch] text-[clamp(2.4rem,6.5vw,5.75rem)]">
-              Kontakt &amp; Anfahrt{" "}
-              <span className="mt-3 block text-[0.38em] font-normal tracking-normal text-white/65">Lackiererei in Essen</span>
+              Kontakt &amp; Anfahrt
             </h1>
             <p className="rise mt-6 max-w-[52ch] text-lg text-white/80" style={{ ["--d" as string]: "100ms" }}>
               Ob Kratzer, Delle, neue Farbe oder Felgen wie neu: Erzählen Sie uns, was Sie vorhaben. Wir beraten Sie

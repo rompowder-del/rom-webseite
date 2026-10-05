@@ -76,7 +76,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     article: [
       {
-        h: "Autolackierung in Essen – worauf es ankommt",
+        h: "Autolackierung – worauf es ankommt",
         p: [
           "Eine gute Lackierung erkennt man an ihrem Finish: gleichmäßiger Glanz, saubere Kanten und ein Farbton, der stimmt. Dafür braucht es drei Dinge – eine sorgfältige Vorbereitung, die richtige Farbanpassung und einen hochwertigen Lackaufbau.",
           "Den größten Teil der Arbeit sieht man am Ende gar nicht: Schleifen, Spachteln, Grundieren und Abkleben. Jede Unebenheit, die hier bleibt, zeichnet sich später im glänzenden Lack ab. Deshalb nehmen wir uns für die Vorbereitung die nötige Zeit.",
@@ -97,20 +97,16 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Fahrzeuglackierung für Essen und das Ruhrgebiet",
+      h: "Ihr Weg zu uns",
       p: [
-        "Unsere Lackiererei liegt im Essener Norden an der Krablerstraße 127 (Halle 36A). Wir sind für Autofahrer aus ganz Essen da – und weil die Werkstatt gut zu erreichen ist, lohnt sich der Weg auch aus den Nachbarstädten im Ruhrgebiet.",
-        "Sie suchen eine Autolackiererei in Essen, Gelsenkirchen, Bottrop oder Oberhausen? Schicken Sie uns einfach ein Foto per WhatsApp. Wir sagen Ihnen, was zu tun ist, und vereinbaren einen Termin.",
+        "Unsere Lackiererei finden Sie an der Krablerstraße 127 (Halle 36A) in Essen – gut erreichbar aus dem ganzen Ruhrgebiet.",
+        "Schicken Sie uns einfach ein paar Fotos per WhatsApp. Wir sagen Ihnen, was zu tun ist, und vereinbaren einen Termin.",
       ],
     },
     faqs: [
       {
         q: "Wo finde ich den Lackcode meines Autos?",
         a: "Meist auf einem Aufkleber oder Typenschild im Türrahmen der Fahrerseite, unter der Motorhaube oder im Kofferraum. Steht er nicht dort, hilft uns die Fahrzeug-Identnummer aus dem Fahrzeugschein weiter.",
-      },
-      {
-        q: "Lackieren Sie auch für Kunden außerhalb von Essen?",
-        a: "Ja. Unsere Werkstatt im Essener Norden ist auch aus Gelsenkirchen, Bottrop, Gladbeck, Oberhausen, Mülheim und Bochum gut zu erreichen. Am einfachsten schicken Sie uns vorab Fotos per WhatsApp.",
       },
     ],
   },
@@ -140,7 +136,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     article: [
       {
-        h: "Karosseriewerkstatt in Essen – alles aus einer Hand",
+        h: "Karosseriewerkstatt – alles aus einer Hand",
         p: [
           "Bei vielen Schäden sind zwei Arbeitsschritte nötig: Erst wird die Karosserie instand gesetzt, dann lackiert. Bei uns passiert beides in derselben Halle. Das spart Ihnen Wege und sorgt dafür, dass Blech- und Lackarbeit sauber ineinandergreifen.",
           "Ob kleine Delle oder größerer Unfallschaden – wir sehen uns den Schaden gemeinsam mit Ihnen an und erklären verständlich, was gemacht werden muss.",
@@ -160,9 +156,9 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Karosseriearbeiten für Essen und das Ruhrgebiet",
+      h: "Ihr Weg zu uns",
       p: [
-        "Sie finden uns im Essener Norden, Krablerstraße 127, Halle 36A. Für Kunden aus Altenessen, Vogelheim, Karnap, Borbeck oder Stoppenberg ist es nur ein kurzer Weg – und auch aus Gelsenkirchen, Bottrop, Gladbeck und Oberhausen sind wir schnell erreicht.",
+        "Unsere Werkstatt finden Sie an der Krablerstraße 127 (Halle 36A) in Essen – gut erreichbar aus dem ganzen Ruhrgebiet.",
         "Schicken Sie uns Fotos vom Schaden per WhatsApp, dann bekommen Sie eine erste Einschätzung, bevor Sie losfahren.",
       ],
     },
@@ -170,10 +166,6 @@ export const serviceContent: Record<string, ServiceContent> = {
       {
         q: "Kann ich mit einem Unfallschaden direkt zu Ihnen kommen?",
         a: "Ja. Melden Sie sich am besten vorher kurz per Telefon oder WhatsApp, damit wir uns Zeit für die Begutachtung nehmen können.",
-      },
-      {
-        q: "Kommen auch Kunden aus Gelsenkirchen oder Bottrop zu Ihnen?",
-        a: "Gern. Unsere Werkstatt liegt im Essener Norden und ist aus den Nachbarstädten gut zu erreichen. Schicken Sie uns vorab Fotos, dann wissen Sie schon vor der Fahrt, was auf Sie zukommt.",
       },
     ],
   },
@@ -203,7 +195,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     article: [
       {
-        h: "Fahrzeug polieren lassen in Essen",
+        h: "Fahrzeug polieren lassen",
         p: [
           "Mit der Zeit verliert jeder Lack an Glanz. Feine Kratzer aus der Waschanlage, matte Stellen und leichte Lackdefekte lassen selbst gepflegte Fahrzeuge stumpf aussehen. Mit einer professionellen Politur holen wir Tiefe und Brillanz zurück.",
           "Dafür arbeiten wir in Stufen: Zuerst wird der Lack gründlich gereinigt und vorbereitet, dann folgen mehrere Politurdurchgänge mit immer feineren Mitteln. Jeder Schritt baut auf dem vorherigen auf – deshalb lässt sich ein gutes Polierergebnis nicht abkürzen.",
@@ -224,9 +216,9 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Fahrzeugpolitur für Essen und das Ruhrgebiet",
+      h: "Ihr Weg zu uns",
       p: [
-        "Unsere Werkstatt liegt im Essener Norden an der Krablerstraße 127. Ob aus Rüttenscheid, Borbeck, Steele oder Kray – oder aus Mülheim, Gelsenkirchen und Bottrop: Wir bringen den Lack Ihres Fahrzeugs wieder zum Glänzen.",
+        "Unsere Werkstatt finden Sie an der Krablerstraße 127 (Halle 36A) in Essen. Bringen Sie Ihr Fahrzeug einfach während unserer Öffnungszeiten vorbei.",
         "Vorab reichen ein paar Fotos per WhatsApp, damit wir den Zustand des Lacks einschätzen können.",
       ],
     },
@@ -262,7 +254,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     article: [
       {
-        h: "Felgen pulverbeschichten lassen in Essen",
+        h: "Felgen pulverbeschichten lassen",
         p: [
           "In unserer eigenen Pulverkabine beschichten wir Felgen und Metallteile. Das Farbpulver wird elektrostatisch aufgeladen und haftet dadurch gleichmäßig auf dem Bauteil. Anschließend wird es im Ofen eingebrannt und verbindet sich zu einer geschlossenen, harten Schicht.",
           "Das Ergebnis ist eine Oberfläche, die deutlich widerstandsfähiger ist als herkömmlicher Lack – ideal für Felgen, die im Alltag viel aushalten müssen.",
@@ -283,9 +275,9 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "Pulverbeschichtung für Essen, das Ruhrgebiet und NRW",
+      h: "Ihr Weg zu uns",
       p: [
-        "Eine Pulverbeschichtung für Felgen findet man nicht in jeder Werkstatt. Mit unserer eigenen Pulverkabine in Essen sind wir eine Anlaufstelle für Kunden aus ganz Essen, aus Städten wie Gelsenkirchen, Bottrop, Gladbeck, Oberhausen, Mülheim, Bochum und Herne – und für alle in NRW, die ihre Felgen in gute Hände geben möchten.",
+        "Mit unserer eigenen Pulverkabine sind wir eine Anlaufstelle für alle, die ihre Felgen in gute Hände geben möchten – auch von weiter her aus NRW. Sie finden uns an der Krablerstraße 127 (Halle 36A) in Essen.",
         "Sie können uns die Felgen auch ohne Fahrzeug bringen. Schicken Sie uns vorab ein Foto und Ihre Wunschfarbe per WhatsApp.",
       ],
     },
@@ -323,7 +315,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     article: [
       {
-        h: "Felgen glanzdrehen lassen in Essen",
+        h: "Felgen glanzdrehen lassen",
         p: [
           "Zweifarbige Alufelgen mit glanzgedrehter Front gehören bei vielen Herstellern zur Serienausstattung. Sie sehen beeindruckend aus – sind aber empfindlicher als einfarbig lackierte Felgen. Schon kleine Beschädigungen der Schutzschicht lassen Feuchtigkeit an das Aluminium, und es bilden sich Korrosionsflecken.",
           "Mit unserer CNC-Drehbank bearbeiten wir solche Felgen wieder so, dass sie aussehen wie ab Werk: Die Felge wird zuerst beschichtet, dann wird die Front präzise abgedreht und anschließend mit Klarlack versiegelt.",
@@ -343,9 +335,9 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
     ],
     local: {
-      h: "CNC-Glanzdrehen für Essen, das Ruhrgebiet und NRW",
+      h: "Ihr Weg zu uns",
       p: [
-        "Für das Glanzdrehen braucht es eine CNC-Drehbank – die haben wir direkt in unserer Werkstatt in Essen. Ob aus Essen oder aus Gelsenkirchen, Bottrop, Oberhausen, Mülheim, Duisburg und Bochum: Ihre Felgen werden bei uns komplett bearbeitet und müssen nicht an einen weiteren Betrieb gegeben werden. Weil nicht jede Werkstatt eine CNC-Drehbank hat, lohnt sich der Weg nach Essen auch aus anderen Teilen von NRW.",
+        "Für das Glanzdrehen braucht es eine CNC-Drehbank – die haben wir direkt in unserer Werkstatt. Ihre Felgen werden bei uns komplett bearbeitet, der Weg lohnt sich deshalb auch von weiter her aus NRW. Sie finden uns an der Krablerstraße 127 (Halle 36A) in Essen.",
         "Am besten schicken Sie uns zuerst ein Foto Ihrer Felgen per WhatsApp. Wir sagen Ihnen dann, ob sie sich für das Glanzdrehen eignen.",
       ],
     },

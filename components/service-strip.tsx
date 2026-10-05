@@ -89,7 +89,7 @@ export function ServiceStrip() {
         <div>
           <h2 className="display-sm text-[clamp(2rem,4vw,3.25rem)]">Leistungen</h2>
           <p className="mt-4 max-w-[50ch] text-graphite">
-            Fünf Leistungen, eine Werkstatt: vom Lack über die Karosserie bis zur Felge – alles in unserer Halle in Essen.
+            Fünf Leistungen, eine Werkstatt: vom Lack über die Karosserie bis zur Felge – alles in unserer eigenen Halle.
           </p>
         </div>
         <div className="hidden gap-2 md:flex">
