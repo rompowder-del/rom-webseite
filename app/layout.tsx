@@ -3,6 +3,7 @@ import "./globals.css"
 import { PaintProvider } from "@/components/paint-context"
 import { RevealObserver } from "@/components/reveal-observer"
 import { MobileActionBar } from "@/components/mobile-action-bar"
+import { CookieBanner } from "@/components/cookie-banner"
 import { site } from "@/lib/site"
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           {children}
           <RevealObserver />
           <MobileActionBar />
+          <CookieBanner />
         </PaintProvider>
       </body>
     </html>

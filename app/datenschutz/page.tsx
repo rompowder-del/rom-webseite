@@ -25,6 +25,17 @@ export default function Page() {
             <br />
             E-Mail: {site.email}
           </p>
+          <h2 className="display-sm pt-6 text-xl text-black">Cookies</h2>
+          <p>
+            Unsere Website verwendet nur technisch notwendige Speicherungen. Dazu gehört Ihre Auswahl im Cookie-Hinweis,
+            damit dieser nicht bei jedem Besuch erneut erscheint. Diese Information wird ausschließlich in Ihrem Browser
+            gespeichert. Es werden keine Analyse- oder Werbe-Cookies eingesetzt.
+          </p>
+          <p>
+            Links zu Google Maps und WhatsApp öffnen die jeweiligen Dienste erst, wenn Sie darauf klicken. Ab dann gelten
+            die Datenschutzbestimmungen des jeweiligen Anbieters. Ihre Auswahl können Sie jederzeit über „Cookie-Einstellungen“
+            am Ende jeder Seite ändern.
+          </p>
           <p>[Den vollständigen Text der bisherigen Seite rom-cartech.de hier übernehmen.]</p>
         </div>
       </main>

@@ -2,6 +2,7 @@ import Link from "next/link"
 import { services, site } from "@/lib/site"
 import { Cta } from "@/components/cta"
 import { OpenStatus } from "@/components/open-status"
+import { CookieSettingsLink } from "@/components/cookie-banner"
 
 /** Schlanker Footer: ein klarer Weg zum Anruf, Leistungen, Pflichtangaben */
 export function Footer() {
@@ -69,9 +70,10 @@ export function Footer() {
 
         <div className="mt-24 flex flex-col gap-6 border-t border-white/10 pt-8 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
           <p className="wordmark text-[12px] text-white/80">R.O.M CARTECH</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
             <Link href="/impressum" className="link-underline hover:text-white">Impressum</Link>
             <Link href="/datenschutz" className="link-underline hover:text-white">Datenschutz</Link>
+            <CookieSettingsLink className="link-underline hover:text-white" />
             <span>© {new Date().getFullYear()}</span>
           </div>
         </div>
