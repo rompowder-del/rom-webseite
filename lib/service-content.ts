@@ -234,23 +234,27 @@ export const serviceContent: Record<string, ServiceContent> = {
   pulverbeschichtung: {
     points: [
       {
-        title: "Entlackung und Vorbereitung inklusive",
-        text: "Die Haltbarkeit einer Pulverbeschichtung hängt vom Untergrund ab. Deshalb entfernen wir die alte Beschichtung gründlich und materialschonend, bevor das neue Pulver aufgetragen wird.",
+        title: "Professionelle Felgenaufbereitung",
+        text: "Wir bringen Ihre Felgen wieder in Bestform – ob verkratzt, verblasst oder einfach in einer Farbe, die nicht mehr gefällt.",
       },
       {
-        title: "Sehr hohe Schlag- und Kratzfestigkeit",
-        text: "Die eingebrannte Pulverschicht ist dicker als Nasslack und dadurch besonders robust. Steinschläge und kleine Kratzer, wie sie im Alltag an Felgen entstehen, steckt sie deutlich besser weg.",
+        title: "Gründliche Oberflächenvorbereitung",
+        text: "Die Haltbarkeit einer Pulverbeschichtung hängt vom Untergrund ab. Deshalb bereiten wir jede Oberfläche sorgfältig vor, bevor das Pulver aufgetragen wird.",
       },
       {
-        title: "Beständig gegen Streusalz und Bremsstaub",
-        text: "Felgen haben es schwer: Streusalz im Winter, heißer Bremsstaub, aggressive Reiniger. Eine Pulverbeschichtung schützt das Metall darunter zuverlässig vor diesen Belastungen.",
+        title: "Hochwertige und widerstandsfähige Pulverbeschichtung",
+        text: "Die eingebrannte Pulverschicht ist dicker als Nasslack und besonders robust gegen Steinschlag, Kratzer, Streusalz und Bremsstaub – ideal für Felgen im Alltag.",
       },
       {
-        title: "Große Auswahl an RAL-Farbtönen",
-        text: "Klassisches Silber, Anthrazit, Schwarz – oder ein auffälliger Farbton als Akzent: Bei der Pulverbeschichtung steht Ihnen eine große Auswahl an RAL-Farben zur Verfügung.",
+        title: "Große Auswahl an RAL- und Sonderfarben",
+        text: "Klassisches Silber, Anthrazit, Schwarz oder ein auffälliger Farbton als Akzent: Neben einer großen Auswahl an RAL-Farben sind auch Sonderfarben möglich.",
       },
       {
-        title: "Glanz, Seidenmatt oder Matt",
+        title: "Candy-, Flop-, Metallic- und Effektoberflächen",
+        text: "Für einen ganz individuellen Look gestalten wir Ihre Felgen auch mit Candy-, Flop-, Metallic- und Effektoberflächen.",
+      },
+      {
+        title: "Individuelle Glanzgrade von Hochglanz bis Matt",
         text: "Neben dem Farbton wählen Sie den Glanzgrad. Hochglanz wirkt edel und klassisch, Seidenmatt dezent, Matt besonders modern und sportlich.",
       },
     ],
@@ -265,7 +269,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       {
         h: "Pulverbeschichtung oder Lackierung?",
         p: [
-          "Beide Verfahren haben ihre Stärken. Die Pulverbeschichtung punktet mit Robustheit und Langlebigkeit. Die Nasslackierung bietet mehr Möglichkeiten bei Effekt- und Sonderfarben, etwa Metallic- oder Perleffekte im Fahrzeugfarbton.",
+          "Beide Verfahren haben ihre Stärken. Die Pulverbeschichtung punktet mit Robustheit und Langlebigkeit – und bietet mit Candy-, Flop-, Metallic- und Effektoberflächen viele Gestaltungsmöglichkeiten. Die Nasslackierung ist ideal, wenn ein Teil exakt im Fahrzeugfarbton lackiert werden soll.",
           "Für Felgen im Alltagseinsatz ist die Pulverbeschichtung oft die erste Wahl. Wir beraten Sie, welches Verfahren zu Ihrem Vorhaben passt – und weil wir beides anbieten, bekommen Sie eine ehrliche Empfehlung.",
         ],
       },
