@@ -46,7 +46,7 @@ export const site = {
   /** Links zu Facebook/Instagram – solange leer, werden sie nicht angezeigt */
   facebook: "",
   instagram: "",
-  url: "https://rom-cartech.de",
+  url: "https://www.rom-cartech.de",
 }
 
 export type Service = {
