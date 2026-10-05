@@ -202,7 +202,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="bg-mist py-24 md:py-36">
           <div className="mx-auto max-w-[1440px] px-[4vw]">
             <h2 data-reveal className="display-sm text-[clamp(2rem,4vw,3.25rem)]">So gehen wir vor</h2>
-            <ol data-reveal-group className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+            <ol data-reveal-group className={`mt-14 grid gap-4 sm:grid-cols-2 lg:gap-5 ${s.steps.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4"}`}>
               {s.steps.map((st, i) => (
                 <li key={st.title} data-reveal className="bezel">
                   <div className="bezel-core flex h-full flex-col bg-white p-7 md:p-8">
