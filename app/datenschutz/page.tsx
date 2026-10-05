@@ -67,7 +67,7 @@ export default function Page() {
 
       <LegalSection title="6. Kontaktaufnahme">
         <p>
-          Wenn Sie uns per E-Mail, Telefon, Telefax oder über das Kontaktformular kontaktieren, verarbeiten wir Ihre
+          Wenn Sie uns per E-Mail, Telefon oder über das Kontaktformular kontaktieren, verarbeiten wir Ihre
           Angaben (zum Beispiel Name, Telefonnummer, E-Mail-Adresse, Ihre Nachricht und gegebenenfalls Fotos), um Ihre
           Anfrage zu bearbeiten. Das Kontaktformular übermittelt keine Daten an unseren Server, sondern öffnet Ihr
           eigenes E-Mail-Programm mit einer vorausgefüllten Nachricht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO,

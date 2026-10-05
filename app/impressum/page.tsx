@@ -24,8 +24,6 @@ export default function Page() {
         <p>
           Telefon: <a href={`tel:${legal.phone.replace(/[^+\d]/g, "")}`} className="underline underline-offset-2 hover:text-black">{legal.phone}</a>
           <br />
-          Telefax: {legal.fax}
-          <br />
           E-Mail: <a href={`mailto:${legal.email}`} className="underline underline-offset-2 hover:text-black">{legal.email}</a>
         </p>
       </LegalSection>

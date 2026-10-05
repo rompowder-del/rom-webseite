@@ -6,11 +6,10 @@
 export const legal = {
   name: "R.O.M CARTECH Lackiererei",
   owner: "Omar El Ayoubi",
-  street: "Krablerstr. 127 / Halle 33 a",
+  street: "Krablerstraße 127 / Halle 36A",
   city: "45326 Essen",
-  phone: "+49 (176) 61724202",
-  fax: "+49 (201) 61422208",
-  email: "ROMCartech@gmail.com",
+  phone: "+49 163 7856598",
+  email: "rom.powder@gmail.com",
   ustId: "DE361345663",
   wIdNr: "95 812 369 701",
 }
