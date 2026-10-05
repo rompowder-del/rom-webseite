@@ -105,10 +105,10 @@ export const services: Service[] = [
       "Anschließende Lackierung im Originalfarbton",
     ],
     steps: [
-      { title: "Schaden ansehen", text: "Wir begutachten den Schaden gemeinsam mit Ihnen und besprechen, was repariert und was getauscht werden muss." },
-      { title: "Karosserie richten", text: "Bleche ausbeulen und richten, beschädigte Teile ersetzen, Übergänge sauber herstellen." },
-      { title: "Vorbereiten und lackieren", text: "Spachteln, grundieren und im Originalfarbton lackieren – passend zum restlichen Fahrzeug." },
-      { title: "Übergabe", text: "Endkontrolle bei Tageslicht und Übergabe Ihres Fahrzeugs." },
+      { title: "Fahrzeug & Schaden begutachten", text: "Wir schauen uns das Fahrzeug und die beschädigten Bereiche an und besprechen gemeinsam die notwendigen Arbeiten." },
+      { title: "Karosseriearbeiten durchführen", text: "Demontieren, ausrichten, Dellen und Beulen beheben sowie beschädigte Fahrzeugteile fachgerecht bearbeiten oder austauschen." },
+      { title: "Oberfläche vorbereiten & lackieren", text: "Die reparierten Bereiche werden professionell vorbereitet und anschließend passend zum Fahrzeug lackiert." },
+      { title: "Endkontrolle & Übergabe", text: "Nach Abschluss aller Arbeiten prüfen wir das Ergebnis sorgfältig, bevor das Fahrzeug an Sie übergeben wird." },
     ],
     faqs: [
       { q: "Lohnt sich die Reparatur einer Delle?", a: "Meist ja – je früher, desto besser, bevor an beschädigten Stellen Rost entsteht. Wir sagen Ihnen nach der Besichtigung, was sinnvoll ist." },
