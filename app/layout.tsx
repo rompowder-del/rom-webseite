@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | R.O.M Cartech",
   },
   description:
-    "Lackiererei in Essen für das Ruhrgebiet und NRW: Fahrzeuglackierung, Karosserie, Polierung, Pulverbeschichtung und CNC-Glanzdrehen – alles unter einem Dach.",
+    "Lackiererei in Essen für das Ruhrgebiet und NRW: Fahrzeuglackierung, Karosserie, Polierung, Pulverbeschichtung und CNC-Glanzdrehen – alles aus einem Betrieb.",
   openGraph: { siteName: "R.O.M Cartech", locale: "de_DE", type: "website" },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },

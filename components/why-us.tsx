@@ -1,11 +1,11 @@
-import { services } from "@/lib/site"
 import { Photo } from "@/components/photo"
 
-const polish = services.find((s) => s.slug === "polierung")!
+/** Unsere Halle – Foto vom Betrieb */
+const halle = { name: "halle", alt: "Werkstatthalle von R.O.M Cartech mit Lackierkabine und Oldtimer vor dem Firmenschild", w: 1086, h: 1448, position: "50% 62%" }
 
 const reasons = [
   {
-    title: "Alles unter einem Dach",
+    title: "Alles aus einem Betrieb",
     text: "Instandsetzen, Lackieren, Polieren, Pulverbeschichten und Glanzdrehen – Ihre Teile verlassen für keinen Arbeitsschritt unsere Halle.",
   },
   {
@@ -32,15 +32,15 @@ export function WhyUs() {
         </h2>
 
         <div data-reveal-group className="mt-14 grid gap-4 md:grid-cols-12 md:gap-5">
-          {/* Werkstattfoto als große Kachel */}
+          {/* Unsere Halle als große Kachel */}
           <div data-reveal className="bezel md:col-span-7 md:row-span-2">
             <div className="bezel-core relative h-full min-h-[22rem]">
               <Photo
-                name={polish.image.name}
-                alt={polish.image.alt}
-                w={polish.image.w}
-                h={polish.image.h}
-                position={polish.image.position}
+                name={halle.name}
+                alt={halle.alt}
+                w={halle.w}
+                h={halle.h}
+                position={halle.position}
                 sizes="(min-width: 768px) 55vw, 92vw"
                 className="absolute inset-0 h-full w-full"
               />
